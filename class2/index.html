@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data types in javascript</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data types in javascript:</h1>
+    <h3>JavaScript has several data types, and they can be broadly categorized into two groups: <span style="color:blue">primitive</span> and <span style="color:blue">non-primitive (objects).</span></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Example Code</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>String</td>
+                <td><code>let name = "John";</code></td>
+                <td>Textual data</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td><code>let age = 25;</code></td>
+                <td>Numbers (integers and floats)</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td><code>let isLoggedIn = true;</code></td>
+                <td>True or false values</td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td><code>let x;</code></td>
+                <td>Variable declared but not initialized</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td><code>let y = null;</code></td>
+                <td>Intentionally empty value</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td><code>let sym = Symbol('id');</code></td>
+                <td>Unique and immutable value</td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td><code>let big = BigInt(12345678901234567890n);</code></td>
+                <td>Large integer values</td>
+            </tr>
+            <tr>
+                <td>Object</td>
+                <td><code>let obj = {name: "Alice", age: 30};</code></td>
+                <td>Collection of key-value pairs</td>
+            </tr>
+            <tr>
+                <td>Array</td>
+                <td><code>let arr = [1, 2, 3];</code></td>
+                <td>Ordered list of values</td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td><code>function greet() { return "Hello!"; }</code></td>
+                <td>Reusable code block or object</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

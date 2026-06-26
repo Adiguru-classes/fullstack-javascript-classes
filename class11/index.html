@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+
+    <!-- normal inline event -->
+    <button onclick="showMessage()">
+    Click Me for message
+</button>
+
+<!-- event with addeventlistener -->
+<button id= "btn">
+    Click Me
+</button>
+
+    <form>
+      <input type="text" placeholder="Please enter name" id="name" />
+    </form>
+    <button onclick="getName()">click me</button>
+
+<form id="myForm">
+    <input type="text">
+    <button>Submit</button>
+</form>
+
+    <button id="click-button" style="background-color: red">Click</button>
+
+    <button onclick="showMessage()" style="background-color: blue">
+      click me
+    </button>
+
+    <div
+      id="hoverDiv"
+      style="width: 200px; height: 100px; background-color: lightblue"
+    >
+      i am hover event
+    </div>
+    <!-- <button mouseover="changeColor()" id="hover-button" style="background-color:pink">hover button</button> -->
+
+    <p id="display" onmouseover="alert('hello')">  </p>
+
+
+
+    <button onclick="showMessage()" style="background-color: green">
+      Click Me
+    </button>
+
+    <form id="myForm">
+      <input type="text" placeholder="Name" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Form events -->
+    <form method="post" onsubmit="alert('form is submitted')" id="form">
+      <input id="input-one" placeholder="input-one" />
+
+      <input
+        id="input-two"
+        placeholder="Please enter keydown"
+        onkeydown="keydownEvent()"
+      />
+      <input
+        id="input-three"
+        onblur="blurEvent()"
+        placeholder="Please enter blur"
+      />
+      <input
+        id="input-four"
+        onkeyup="keyupEvent()"
+        placeholder="Please enter keyup"
+      />
+      <input
+        id="input-six"
+        onchange="keypressEvent()"
+        placeholder="key press input"
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- show images with clicking event -->
+<button onclick="showImage()">
+    Show Image bn 
+</button>
+<br><br>
+<img
+id="myImage"
+src="https://picsum.photos/300"
+style="display:none;"
+>
+
+    <input type="text" id="liveInput" placeholder="Type here" />
+    <p id="outputText"></p>
+
+    <p id="display-change"></p>
+    <!-- Keyboard events -->
+    <!-- onkeydown, onkeyup, onkeypress -->
+    <input id="input-five" onkeypress="keypressEvent()" />
+
+    <!-- preventDefault() -->
+    <input type="checkbox" id="check" />
+
+    <a href="https://www.amazon.com" id="amazon-data">Amazon</a>
+
+    <!-- external js -->
+    <script src="script.js"></script>
+  </body>
+</html>
+1
+<!-- video: onplay, onpause -->09
+
+<!-- todays task for students
+
+ Task: Student Profile Card
+Initially:
+
+Name: Raj
+Course: JavaScript
+
+ [Show Details]
+ [Hide Details]
+[Change Name]
+
+//requirements
+<h1 id="name">Raj</h1>
+
+<p id="course">
+JavaScript
+</p>
+
+<button>
+Show Details
+</button>
+
+<button>
+Hide Details
+</button>
+
+<button>
+Change Name
+</button> -->

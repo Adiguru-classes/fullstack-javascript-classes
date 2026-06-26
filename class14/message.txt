@@ -1,0 +1,1 @@
+Hello Rajkumar! This is the message loaded from message.txt.

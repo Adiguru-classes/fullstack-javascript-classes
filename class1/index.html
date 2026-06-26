@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class1(var,let and const)</title>
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          background-color: #f4f4f4;
+        }
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    
+        table {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          border-collapse: collapse;
+          background-color: #fff;
+        }
+    
+        th, td {
+          padding: 15px;
+          text-align: left;
+          border: 1px solid #ccc;
+        }
+    
+        th {
+          background-color: #007BFF;
+          color: white;
+        }
+    
+        td {
+          background-color: #f9f9f9;
+        }
+    
+        tr:nth-child(even) td {
+          background-color: #e9e9e9;
+        }
+    
+        td code {
+          font-size: 0.9em;
+          background-color: #f2f2f2;
+          padding: 2px 4px;
+          border-radius: 4px;
+          color: #d63384;
+        }
+      </style>
+</head>
+<body>
+
+    <h1>Difference between var, let and const</h1>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>var</th>
+            <th>let</th>
+            <th>const</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scope</td>
+            <td>Function-scoped</td>
+            <td>Block-scoped</td>
+            <td>Block-scoped</td>
+          </tr>
+          <tr>
+            <td>Hoisting</td>
+            <td>Yes, initialized as <code>undefined</code></td>
+            <td>Yes, but not initialized (Temporal Dead Zone)</td>
+            <td>Yes, but not initialized (Temporal Dead Zone)</td>
+          </tr>
+          <tr>
+            <td>Reassignment</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Redeclaration</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Use in Loops</td>
+            <td>Not recommended, no block-level scope</td>
+            <td>Recommended, creates block-level scope</td>
+            <td>Not typically used in loops</td>
+          </tr>
+          <tr>
+            <td>Common Use Case</td>
+            <td>Avoid using due to unpredictable behavior</td>
+            <td>For variables that will change</td>
+            <td>For constants and values that will not change</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <h2>1.Scopes</h2>
+    <h4>var: Function-scoped (or globally scoped if declared outside a function).<br><br>
+        let and const: Block-scoped (limited to the block where they are declared, such as inside loops, functions, or if statements).</h4>
+
+        <h2>2. Hoisting</h2>
+           <h4> var: Hoisted to the top of its scope but initialized as undefined.<br><br>
+            let and const: Hoisted to the top of their block but are not initialized, causing a "temporal dead zone" until the variable is declared.</h4>
+
+            <h2>3. Reassignment</h2>
+            <h4>var: Can be redeclared and reassigned.<br>
+                let: Can be reassigned but not redeclared within the same scope.<br>
+                const: Cannot be reassigned or redeclared, though the contents of objects and arrays declared with const can be modified.</h4>
+                <h2>4.Behavior in Loops</h2>
+                <h4>var: Does not create a new variable for each iteration in loops, leading to unexpected behavior.<br>
+                    let: Creates a new variable for each iteration, providing the expected behavior.</h4>
+
+                    
+    <script src="script.js"></script>
+
+        <!-- <script src="script2.js"></script> -->
+
+
+
+</body>
+</html>
