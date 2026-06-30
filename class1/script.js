@@ -1,5 +1,27 @@
+// var aa='vamshi'//
+// // console.log(aa)
+// console.log(typeof(aa))//string
+// console.log(typeof(bb))//number
 
- var c ="10"
+// var cc="10";
+// console.log(typeof(cc))//string
+
+// let aa='vamshi';
+
+// const names='vamshi';
+// const a=10
+
+
+
+
+
+
+
+
+
+
+ const c ="10"//
+
 console.log(c);
 console.log(typeof(c)); //string
 
@@ -51,18 +73,18 @@ function testVar() {
 
 
 //2.Hoisting
-console.log(a); // undefined (due to hoisting)
-var a = 5;
+// console.log(a); // undefined (due to hoisting)
+// var a = 5;
 
-console.log(b); // Error: Cannot access 'b' before initialization
-let b = 10;
+// console.log(b); // Error: Cannot access 'b' before initialization
+// let b = 10;
 
 //3.Reassignment
 
 //`var` allows redeclaration and reassignment
 var x = 10;
 var x = 20; // Redeclaration is allowed
-x = 30;    // Reassignment is allowed
+ x = 30;    // Reassignment is allowed
 console.log(x); // 30
 
 // `let` allows reassignment but not redeclaration
@@ -73,6 +95,7 @@ console.log(y); // 50
 
 // `const` does not allow redeclaration or reassignment
 const z = 60;
+const z=70
 // z = 70; // Error: Assignment to constant variable
 console.log(z); // 60
 

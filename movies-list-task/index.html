@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎬 Movie Manager</h1>
+
+    <div class="top-bar">
+
+        <input
+            type="text"
+            id="searchMovie"
+            placeholder="Search Movie">
+
+        <button id="searchBtn">
+            Search
+        </button>
+
+    </div>
+
+    <div class="add-movie">
+
+        <input
+            type="text"
+            id="movieInput"
+            placeholder="Enter Movie Name">
+
+        <button id="addBtn" onclick="addMovie()">
+            Add Movie
+        </button>
+
+    </div>
+
+    <div class="controls">
+
+        <button id="showBtn">
+            Show Movies
+        </button>
+
+        <button id="hideBtn">
+            Hide Movies
+        </button>
+
+    </div>
+
+    <ul id="movieList">
+
+        <!-- Movies will appear here -->
+
+    </ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

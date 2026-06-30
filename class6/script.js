@@ -1,7 +1,7 @@
 // Arrays
 //array elements
-// index/position starts from 0
-var num = [80, 78, 56, 34, 20];//array of numbers
+
+var num = [80, 78, 56, 34, 20] //array of numbners
 var color = ['pink', 'red', 'blue', 'black'];//array of strings
 var mix = [null, true, false, 90, 'value'];//
 
@@ -31,10 +31,11 @@ console.log(num.join(' '));
 
 var players=['virat','rohit','dhoni','gill' ,'kohli','sachin'];
 console.log(players)
-players.pop();//it will emove the last element of an array
+players.pop();//it will remove the last element of an array
 console.log(players)
 players.push('hardik');//it will add element at last of an array
 console.log(players)
+
 // players.pop('kohli');
 // console.log(players);
 
@@ -72,13 +73,16 @@ console.log(color);
 // console.log(animal);//output:original array is modified here
 
 const nums = [1, 2, 3, 4, 5];
-const spliced = nums.splice(2,2 ,20,30,60);//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
+console.log(nums)
+const spliced = nums.splice(1,3);//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
 console.log(spliced)
 console.log(nums)//otput:1 ,original array is modified here
 
 
-color.splice(1, 1, 'black', 'yellow');//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
-console.log(color);
+var colors = ['pink', 'red', 'blue', 'black'];//array of strings
+
+colors.splice(0, 1, 'green', 'yellow');//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
+console.log(colors);
 
 const fruits = ['apple', 'banana', 'cherry', 'date', 'fig'];
 const splicedFruits = fruits.splice(1, 2,'mango','grapes');
@@ -104,11 +108,18 @@ console.log(color);
 //Does not modify the original array.
 //Returns a new array with the extracted elements
 
-const numbers = [1, 2, 3, 4, 5];
-const sliced = numbers.slice(1, 2); // Slices from index 1 to 3 (4 is excluded)
+const numbers = [23,34,56,76,89,100];
+const sliced = numbers.slice(1, 4); // Slices from given index value 
 
-console.log(sliced); // Output: [2, 3, 4]
+console.log(sliced); // Output:
+
 console.log(numbers); // Output: [1, 2, 3, 4, 5] (original array remains unchanged)
+
+var  student=["vivek","rohith","yashu","charan"];
+var result= student.splice(1,2,'rajkumar')
+console.log(result);
+console.log(student);
+
 
 const fruitss = ['apple', 'banana', 'cherry', 'date', 'fig'];
 const slicedfruits = fruitss.splice(1, 2);
@@ -138,45 +149,56 @@ console.log(numss);
 //split (convert string to array)
 var str = '8-9-8-9-9';
 console.log(str.split('-'));
+//object is madeup of key and value pairs
+
+var student1={
+
+name:'vivek',
+age:20,
+role:'developer'
+}
+console.log(student1)
+
 
 
 //array of objects
-// var employee = 
+var employee = 
 
-// [{
-//     name: 'alex',
-//     age: 20,
-//     contact: {
-//         number: 8090,
-//         address: ''
-//     }
-// }, {
-//     name: 'harry',
-//     age: 22,
-//     contact: {
-//         number: 889889,
-//         address: ''
-//     }
-// }, {
-//     name: 'alina',
-//     age: 24,
-//     contact: {
-//         number: 8709090,
-//         address: ''
-//     }
-// }];
+[{
+    name: 'alex',
+    age: 20,
+    contact: {
+        number: 889889,
+        address: ''
+    }
+}, {
+    name: 'alina',
+    age: 24,
+    contact: {
+        number: 8709090,
+        address: ''
+    }} ,
+    {
+    name: 'harry',
+    age: 22,
+    contact: {
+        number: 889889,
+        address: '2-7-80'
+    }
+}]
+;
 
-// console.log(employee);
-// console.log(employee[2].age);
-// console.log(employee[2].contact.number);
-// employee.push({
-//     name: 'alina',
-//     age: 24,
-//     contact: {
-//         number: 8709090,
-//         address: ''
-//     }
-// });
+console.log(employee);
+console.log(employee[2].age);
+console.log(employee[2].contact.address);
+employee.push({
+    name: 'alina',
+    age: 24,
+    contact: {
+        number: 8709090,
+        address: ''
+    }
+});
 
 // employee[2].name = 'alex';
 // console.log(employee);
@@ -265,6 +287,7 @@ console.log(str.split('-'));
 // console.log(val);
 // val.reverse();
 // console.log(val.join(''));
+
 
 
 //task
