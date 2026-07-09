@@ -217,11 +217,11 @@ numbers.forEach(function(ramesh) {
 });
 
 // Output:
-// 1
 // 2
-// 3
 // 4
-// 5
+// 6
+// 8
+// 10
 const books = [
     { title: "To Kill a Mockingbird", author: "Harper Lee" },
     { title: "1984", author: "George Orwell" },

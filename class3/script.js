@@ -13,7 +13,7 @@
 
 var student="rajkumar";
 
-if(student=="raj"){
+if(student=="rajkumar"){
     console.log("hello raj");
 }else{
 console.log("wrong input");
@@ -32,9 +32,10 @@ else{
 // var a='hello world'
 console.log('hello world')
 
-var firstName = 'alina';
+var firstName = 'alina'
+var secondname='vamshi';
 if (firstName == 'alina') {
-    console.log(firstName);
+    console.log(firstName);//alina
 }
 
 // if else
@@ -46,15 +47,15 @@ else {
 }
 
 
-let marks = 75;
+let parvezmarks = 75;
 
-if(marks >= 90){
+if(parvezmarks >= 90){
    console.log("Grade A");
 }
-else if(marks >= 70){
+else if(parvezmarks >= 70){
    console.log("Grade B");//Grade B
 }
-else if(marks >= 50){
+else if(parvezmarks >= 50){
    console.log("Grade C");
 }
 else{
@@ -65,11 +66,11 @@ else{
 // Ternary operator (shortcut syntax for if & else)
 // (condition) ? (its executed if it is true) : (its executed if it is false)
 var stud='akshay'
-var res=(stud=='akshay') ? ('hello akshay') : ('wrong input');
+var res=(stud=='akshaya') ? ('hello akshay') : ('wrong input');
 console.log(res)
 
 var nums="10";
-var results=(nums===10) ? ('correct number') : ('wrong number');
+var results=(nums=="10") ? ('correct number') : ('wrong number');
 console.log(results)
 
 var result = (firstName == 'alina') ? (firstName) : ('wrong input');
@@ -96,17 +97,17 @@ else {
 
 
 // switch
-var ag = 18;
+var ag = "vamsi";
 switch (ag) {// age === case numbers
-    case 12:
+    case 'raj':
         console.log('wrong input');
         break;
 
-    case 14:
+    case 'parvaz':
         console.log('wrong input');
         break;
 
-    case 18:
+    case 'vamsi':
         // alert('eligible');
         console.log('age matching')
         break;
@@ -131,7 +132,7 @@ let coun = 1;
 coun++;
 coun++;
 coun++;
-console.log(count);
+console.log(coun);
 
 let x=5;
 x++;
@@ -390,3 +391,9 @@ else if(color === "yellow"){
 else{
    console.log("Stop");
 }
+
+let ab=10;
+let ab=20;
+// var ab=30;
+
+console.log(ab)

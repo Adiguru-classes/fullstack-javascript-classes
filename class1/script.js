@@ -17,13 +17,31 @@
 
 
 
+var a= 13 //number,
+var a=14
+console.log(a)//
+console.log(typeof(a))
 
+const ab='sai';
+console.log(ab)
+console.log(typeof(ab))
 
+const abc='10'
+console.log(abc)
+console.log(typeof(abc))
 
- const c ="10"//
+const aa=20
+var b='sai kumar'//string
+var c ="10"//
 
-console.log(c);
+console.log(a);
+console.log(typeof(a))//number
+console.log(typeof(b)); //string
 console.log(typeof(c)); //string
+
+
+
+
 
 
 let d=20
@@ -95,7 +113,7 @@ console.log(y); // 50
 
 // `const` does not allow redeclaration or reassignment
 const z = 60;
-const z=70
+// const z=70
 // z = 70; // Error: Assignment to constant variable
 console.log(z); // 60
 

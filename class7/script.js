@@ -10,13 +10,15 @@
 // statement3 -> inc/dec
 
 // steps of execution
+
 // st1 -> st2 -> BOC -> st3 ->st2 -> BOC -> st3
 
-for (var j = 10; j >= 0; j--) {
+//for loop
+for (var j = 5; j >= 0; j--) {
     console.log(j);//10 9 8 ... 1 0
 }
 
-for (var i = 0; i <= 20; i = i + 2) {
+for (var i = 0; i <= 20; i = i + 3) {
     console.log(i);//0,2,4,6....20
 }
 
@@ -31,7 +33,7 @@ for (var x = 0; x <= 0; x++) {
 //iterate over array
 var arr = [90, 78, 67, 78, 100];//5
 
-for (var i =0; i < arr.length; i++) {
+for (var i =0; i<arr.length; i++) {
     console.log(arr[i]);//90 78 67 78 100
 
     if (arr[i] == 100) {
@@ -42,6 +44,15 @@ for (var i =0; i < arr.length; i++) {
     // }
 }
 
+var students=["vivek","rohith","x","y","z"]
+for (var i=0;i<students.length;i++){
+    console.log(students[i])
+
+    if(students[i]=='vishal'){
+        console.log("available")
+    }
+}
+
 
 for(let i = 1; i <= 10; i++){
     
@@ -50,11 +61,15 @@ for(let i = 1; i <= 10; i++){
     }
 }
 
+
+
 let num = 5;
 
 for(let i = 1; i <= 10; i++){
     console.log(num * i);
 }
+
+
 
 let sum = 0;
 
@@ -63,6 +78,49 @@ for(let i = 1; i <= 5; i++){
 }
 
 console.log(sum);
+
+const fruits = ["Apple","Banana","Mango"];
+
+for(let i=0;i<fruits.length;i++){
+    console.log(fruits[i]);
+}
+
+
+//Looping Strings
+const name = "Raj";
+
+for(const l of name){
+    console.log(l);
+}
+
+const word = "JavaScript";
+
+for(let i=0;i<word.length;i++){
+    console.log(word[i]);
+}
+
+//looping objects
+const student = {
+    name:"Raj",
+    age:25,
+    city:"Hyderabad"
+};
+
+for(const key in student){
+    console.log(key);
+}//output:name,age,city
+
+//to get values
+for(const key in student){ //key=name     key=age
+
+    console.log(student[key]);
+}
+
+//to get both keys and values
+for(const key in student){
+    console.log(key  , student[key]);
+}
+
 // infinite loop
 // for(var i = 0; i >= 0; i++){}
 
@@ -73,11 +131,11 @@ console.log(sum);
 //block of code
 // }
 
-let password = "";
+// let password = "";
 
-while(password !== "admin"){
-    password = prompt("Enter Password");
-}
+// while(password !== "admin"){
+//     password = prompt("Enter Password");
+// }
 
 
 var i=0
@@ -149,15 +207,16 @@ for (var i = 0; i < arr.length; i++) {
 }
 
 
+
 console.log('BREAK');
 
 //90 78 98 89 100
 for (var i = 0; i < arr.length; i++) {
 
-    if (arr[i] === 78) {
+    if (arr[i] === 28) {
         console.log('found');
         break;
-        console.log();
+        // console.log();
     }
     else {
 
@@ -262,3 +321,13 @@ const greet = name => {
 };
 
 console.log(greet("Alice")); //give this example withpout using template literals
+
+//finding smallest number from an array
+const a = [12, 8, 130, 5,7,44];
+let smallnum = a[0];  
+for (let i = 1; i < a.length; i++) {
+    if (a[i] < res) {
+        smallnum = a[i];  
+    }
+}
+console.log(smallnum);

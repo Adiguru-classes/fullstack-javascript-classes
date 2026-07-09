@@ -4,23 +4,25 @@ var numTwo = 20.36;//decimal number
 console.log(num, numTwo);
 
 
-var name = "Raj";
+var name = "str  kumar";
 console.log(name.length);//3
 
-var name = "Raj";
-console.log(name.toUpperCase());//RAJ
-var name = "RAJ";
-console.log(name.toLowerCase());//raj
+var name = "strkumar";
+console.log(name.toUpperCase());//str
 
-var name = "   Raj   ";
+var name = "str";
+console.log(name.toLowerCase());//str
+
+var name = "str";
+
 console.log(name)
-console.log(name.trim());//"Raj"
+console.log(name.trim());//"str"
 
 var city = "Delhi";
-console.log(city.charAt(0));
+console.log(city.charAt(4));
 
 var city = "Hyderabad";
-console.log(city.indexOf("e"));//3
+console.log(city.indexOf("e"));
 
 var city = "Hyderabad";
 console.log(city.includes("der"));//true
@@ -29,18 +31,21 @@ var city = "Hyderabad";
 console.log(city.startsWith("Hyd"));//true
 
 var city = "Hyderabad";
-console.log(city.replace("Hyder", "Ahmad"));//ahmadabad
+console.log(city.replace("Hyder", "parvez"));//ahmadabad
 
 var city = "Hyderabad";
-console.log(city.slice(0, 5));//Hyder
+console.log(city.slice(2, 3));//Hyder
 
-var firstName = "Raj";
+var firstName = "str";
 var lastName = "Kumar";
-console.log(firstName + lastName);//rajkumar(no space between them)
+console.log(firstName + lastName);
 
-var first = "Raj";
+var z='hello world'
+console.log(z)//strkumar(no space between them)
+
+var first = "str";
 var last = "Kumar";
-console.log(first.concat(" ", last));//"raj kumar"(adding spaces)
+console.log(first.concat(" ", last));//"str kumar"(adding spaces)
 
 //how to check datatype for a variable
 console.log(typeof (num));//typeof is method
@@ -48,7 +53,7 @@ console.log(typeof (numTwo));
 console.log(num);
 
 //convert string to number
-console.log(parseInt('89.88'));//return the integer number part
+console.log(parseInt("89.88"));//return the integer number part
 console.log(parseFloat('89.678'));//return the number
 console.log(Number('89hj'));//NaN
 console.log(Number('uehfij'));//NaN
@@ -58,13 +63,13 @@ console.log(Number(' '));//0
 //convert number to string
 var ramesh=30;
 console.log(ramesh);//30
-console.log(ramesh.toString());
-console.log(num.toString());//'20'
+// console.log(ramesh.tostring());'30'
+// console.log(num.tostring());//'20'
 console.log(num.toFixed(4));//return a string value with fixed decimal places '20.00'
 console.log(num.toExponential(3));//return a string withe exponenetial values (with specified decimal places)
 
 
-//String
+//string
 
 var firstName = 'ali na';//leading spaces
 var lastName = 'joe';
