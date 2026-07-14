@@ -129,9 +129,10 @@ console.log(typeof (str));//
 // var x = str.slice(2, 8);
 // x.toLowerCase();
 // console.log(x);
-
+ var a=10
+ console.log(typeof(a))
 // Boolean
-console.log(20 > 0);//
+console.log(20 > 0);//truefalse
 console.log(20 < -1);//
 console.log(typeof (20 > 0));//boolean
 console.log(typeof(true));

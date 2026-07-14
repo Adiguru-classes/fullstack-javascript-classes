@@ -1,6 +1,10 @@
 // Arrays
 //array elements
+// const z=10;
+//  z=20;
+// console.log(z)
 
+var a=[1,3,7,9,67]
 var num = [80, 78, 56, 34, 20] //array of numbners
 var color = ['pink', 'red', 'blue', 'black'];//array of strings
 var mix = [null, true, false, 90, 'value'];//
@@ -8,13 +12,13 @@ var mix = [null, true, false, 90, 'value'];//
 console.log(num.length);//5  //length = number of elements
 
 console.log(num);
-console.log(num[2]);//accessing particular elememt in an array
+console.log(num[0]);//accessing particular elememt in an array
 
 console.log(typeof (num));//object
 
-let fruit = ["Apple", "Mango", "Banana"];
-fruit[1] = "Orange";//updating a value mango to orange in array
-console.log(fruit);//['apple,'orange','banaana']
+const fruit = ["Apple", "Mango", "Banana"];
+fruit[0] = "Orange";//updating a value mango to orange in array
+console.log(fruit)
 
 // verfication of array
 console.log(Array.isArray(num));//if this return true, then its an array
@@ -30,10 +34,13 @@ console.log(num.join(' '));
 //push() & pop()
 
 var players=['virat','rohit','dhoni','gill' ,'kohli','sachin'];
+console.log(players);
+players.push('hardik');//it will add element at last of an array
 console.log(players)
+
 players.pop();//it will remove the last element of an array
 console.log(players)
-players.push('hardik');//it will add element at last of an array
+
 console.log(players)
 
 // players.pop('kohli');
@@ -50,7 +57,7 @@ console.log(color);
 
 var animals=['dog','cat','tiger','lion','elephant'];
 console.log(animals)
-animals.shift();
+animals.shift();//it will remove first element from an array
 console.log(animals)
 animals.unshift('monkey');//add new element at start in an array
 console.log(animals)
@@ -72,10 +79,11 @@ console.log(color);
 // console.log(spliced)
 // console.log(animal);//output:original array is modified here
 
+// splice method-it will  modify the original array
 const nums = [1, 2, 3, 4, 5];
 console.log(nums)
-const spliced = nums.splice(1,3);//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
-console.log(spliced)
+const spliced = nums.splice(0,2);//start index value from where you want to delete/add, how many elements to be deleted, new elements to be added
+console.log(spliced);
 console.log(nums)//otput:1 ,original array is modified here
 
 
@@ -109,7 +117,7 @@ console.log(color);
 //Returns a new array with the extracted elements
 
 const numbers = [23,34,56,76,89,100];
-const sliced = numbers.slice(1, 4); // Slices from given index value 
+const sliced = numbers.slice(2, 3); // Slices from given index value 
 
 console.log(sliced); // Output:
 
@@ -131,8 +139,14 @@ namess.splice(1,2,'hai','hello','mani');
 console.log(namess);
 
 //concat
+// var color = ['pink', 'red', 'blue', 'black'];//array of strings
 var concatArr = color.concat(num, mix);
 console.log(concatArr);
+
+var x=[1,2,3]
+var x1=['vasmsi','parvez','mahesh']
+var resultt= x.concat(x1)
+console.log(resultt)
 
 //extract of array 
 var extractArr = num.slice(0, 3);//return an array with 0, 1, 2 index
@@ -158,8 +172,7 @@ age:20,
 role:'developer'
 }
 console.log(student1)
-
-
+ 
 
 //array of objects
 var employee = 

@@ -128,6 +128,12 @@ console.log(f);
 //1.getting element by id name: Selects a single element by its unique ID.
 var element = document.getElementById('myElement');
 console.log(element);
+
+var r=document.getElementById('raj').textContent;
+console.log(r)
+
+
+
 var elementContent = document.getElementById('myElement').textContent;
 console.log(elementContent);
 
@@ -141,8 +147,9 @@ var elements = document.getElementsByClassName('myClass');
 console.log(elements);
 // var elementContent = document.getElementsByClassName('myClass').textContent;
 // console.log(elementContent); //we cannot directly access textContent on the entire collection.
-var elementContent = document.getElementsByClassName('myClass')[0].textContent;
+var elementContent = document.getElementsByClassName('myClass')[2].textContent;
 console.log(elementContent);
+
 var elements = document.getElementsByClassName('myClass');
 for (var i = 0; i < elements.length; i++) {// Loop through the collection to get textContent of each element
   console.log(elements[i].textContent);
@@ -151,6 +158,7 @@ for (var i = 0; i < elements.length; i++) {// Loop through the collection to get
 //3.getting elwmwnt by tagname:Selects all elements by their tag name (e.g., div, p, h1). Returns an HTMLCollection.
 var elements = document.getElementsByTagName('div');
 console.log(elements);
+var r=document.get
 
 //4.querySelector():Selects the first element that matches a CSS selector (ID, class, tag, or combination)
 var element = document.querySelector('.myClass');
@@ -181,6 +189,7 @@ newd.textcontent='this is newd content';
 
 
 //creating new element
+
 // Step 1: Create a new div element
 var newDiv = document.createElement('div');
 // Step 2: Add content to the new div
@@ -188,7 +197,28 @@ newDiv.textContent = 'This is a newly created div element!';
 // Step 3: Append the new div to the container element
 var c = document.getElementById('container');
 c.appendChild(newDiv);
+var d=document.createElement('h1');
+d.textContent='hy i am h1 tag CREATED BY RAJKUMARRRR'
+newDiv.appendChild(d)
+
+var e=document.createElement('h2')
+e.textContent='hy,i am h2 tag created by raj'
+console.log(e)
 console.log(c)
+var x=document.getElementById('container')
+console.log(x)
+x.appendChild(e)
+//creting a new div
+// var newdiv2=document.createElement('div');
+// console.log(newdiv2);
+// newdiv2.textContent='hy,i am new div created by rajkumar xyz';
+
+// var e=document.getElementById('new')
+// e.appendChild(newdiv2)
+// console.log(e)
+
+// newdiv2.style.color='blue'
+// newdiv2.setAttribute('class','mynew-class')
 
 //styling
 newDiv.style.color = 'green'; // Change text color
@@ -261,9 +291,9 @@ function displayName(){
     .innerHTML = name;
 
 }
-
+-
 //counter app
-let count = 0;
+// let count = 0;
 
 function increment(){
 

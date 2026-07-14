@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form validation usingDOM and events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration</h1>
+
+        <form id="registrationForm">
+
+            <div class="form-group">
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <p class="error" id="nameError"></p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="text"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <p class="error" id="emailError"></p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter your age"
+                >
+
+                <p class="error" id="ageError"></p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                >
+
+                <p class="error" id="passwordError"></p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm password"
+                >
+
+                <p class="error" id="confirmPasswordError"></p>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Course</label>
+
+                <select id="course">
+
+                    <option value="">
+                        Select Course
+                    </option>
+
+                    <option value="HTML">
+                        HTML
+                    </option>
+
+                    <option value="CSS">
+                        CSS
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                    <option value="React">
+                        React
+                    </option>
+
+                </select>
+
+                <p class="error" id="courseError"></p>
+
+            </div>
+
+
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+
+                <label for="terms">
+                    I accept Terms & Conditions
+                </label>
+
+            </div>
+
+            <p class="error" id="termsError"></p>
+
+
+            <button type="submit">
+                Register
+            </button>
+
+
+            <h2 id="successMessage"></h2>
+
+        </form>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -82,6 +82,27 @@
       <button type="submit">Submit</button>
     </form>
 
+    <div
+    id="box"
+    onmouseover="mouseEnter()"
+    onmouseout="mouseLeave()">
+    Hover Me
+</div>
+
+<button
+    onmousedown="mouseDown()"
+    onmouseup="mouseUp()">
+    Hold Me
+</button>
+
+<input
+    type="text"
+    id="username"
+    oninput="showText()">
+
+<h2 id="result"></h2>
+
+
     <!-- show images with clicking event -->
 <button onclick="showImage()">
     Show Image bn 

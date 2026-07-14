@@ -1,71 +1,110 @@
 let movies = [];
 
+
 function addMovie() {
 
-    let movieInput = document.getElementById("movieInput");//getting the entire movieinput from ui
+    let movieInput =
+        document.getElementById("movieInput");
 
-    let movie = movieInput.value.trim();//trim if user sends extra spaces between in the text
+    let movie =
+        movieInput.value.trim();
 
-    if(movie === "") {
-        alert("Please Enter Movie Name");//if user enters empty inout give him alert
+
+    if (movie === "") {
+
+        alert("Please Enter Movie Name");
+
         return;
     }
 
-    movies.push(movie);//pushing or adding user added movie into movies[] array
 
-    movieInput.value = "";//after adding mobvie input becoems empty
+    movies.push(movie);
 
-    displayMovies();//we are calling diaoplaymovies() function here to  diaplay all the movies of an arary
+    movieInput.value = "";
+
+    displayMovies();
 }
+
+
 
 function displayMovies() {
 
-    let movieList = document.getElementById("movieList");//storing the ul element tag in movielist variable
+    let movieList =
+        document.getElementById("movieList");
 
-    movieList.innerHTML = "";//ot removes old list and adds total arrays lista gaoin on every add 
 
-    for(let i = 0; i < movies.length; i++) { //it iterates all the movies froma an movies array
+    movieList.innerHTML = "";
+
+
+    for (let i = 0; i < movies.length; i++) {
+
 
         movieList.innerHTML += `
-        
-        <li>
 
-            <span>${movies[i]}</span>  
-            
-            <div class="movie-buttons">
+            <li>
 
-                <button class="edit" onclick="editMovie(${i})">
-                    Edit
-                </button>
+                <span>
+                    ${movies[i]}
+                </span>
 
-                <button class="delete" onclick="deleteMovie(${i})">
-                    Delete
-                </button>
 
-            </div>
+                <div class="movie-buttons">
 
-        </li>
+
+                    <button
+                        class="edit"
+                        onclick="editMovie(${i})">
+
+                        Edit
+
+                    </button>
+
+
+                    <button
+                        class="delete"
+                        onclick="deleteMovie(${i})">
+
+                        Delete
+
+                    </button>
+
+
+                </div>
+
+            </li>
 
         `;
+
     }
 
 }
 
-function deleteMovie(index){
 
-    movies.splice(index,1);
+
+function deleteMovie(index) {
+
+    movies.splice(index, 1);
 
     displayMovies();
-
 }
 
-function editMovie(index){
 
-    let updatedMovie = prompt("Enter New Movie Name");
 
-    if(updatedMovie !== null && updatedMovie.trim() !== ""){
+function editMovie(index) {
 
-        movies[index] = updatedMovie;
+    let updatedMovie =
+        prompt(
+            "Enter New Movie Name",
+            movies[index]
+        );
+
+
+    if (
+        updatedMovie !== null &&
+        updatedMovie.trim() !== ""
+    ) {
+
+        movies[index] = updatedMovie.trim();
 
         displayMovies();
 
@@ -75,78 +114,68 @@ function editMovie(index){
 
 
 
+function searchMovies() {
+
+    let searchText =
+        document
+            .getElementById("searchMovie")
+            .value
+            .trim()
+            .toLowerCase();
 
 
+    let movieList =
+        document.getElementById("movieList");
 
 
+    movieList.innerHTML = "";
 
 
+    for (let i = 0; i < movies.length; i++) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function searchMovie(){
-
-    let searchValue =
-    document.getElementById("searchMovie")
-    .value
-    .toLowerCase();
-
-    let items =
-    document.querySelectorAll("#movieList li");
-
-    for(let i=0;i<items.length;i++){
 
         let movieName =
-        items[i]
-        .querySelector("span")
-        .innerHTML
-        .toLowerCase();
+            movies[i].toLowerCase();
 
-        if(movieName.includes(searchValue)){
 
-            items[i].style.display = "flex";
+        if (movieName.includes(searchText)) {
 
-        }
-        else{
 
-            items[i].style.display = "none";
+            movieList.innerHTML += `
+
+                <li>
+
+                    <span>
+                        ${movies[i]}
+                    </span>
+
+
+                    <div class="movie-buttons">
+
+
+                        <button
+                            class="edit"
+                            onclick="editMovie(${i})">
+
+                            Edit
+
+                        </button>
+
+
+                        <button
+                            class="delete"
+                            onclick="deleteMovie(${i})">
+
+                            Delete
+
+                        </button>
+
+
+                    </div>
+
+                </li>
+
+            `;
 
         }
 
@@ -154,14 +183,29 @@ function searchMovie(){
 
 }
 
-function hideMovies(){
 
-    document.getElementById("movieList").style.display = "none";
+
+function hideMovies() {
+
+    let movieList =
+        document.getElementById("movieList");
+
+
+    movieList.style.display = "none";
 
 }
 
-function showMovies(){
 
-    document.getElementById("movieList").style.display = "block";
+
+function showMovies() {
+
+    let movieList =
+        document.getElementById("movieList");
+
+
+    movieList.style.display = "block";
+
+
+    displayMovies();
 
 }

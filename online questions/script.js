@@ -1,4 +1,4 @@
-//1.count lowercase letyetrs from a string-example:"abcABC123" ===> 3
+//1.count lowercase lettrs from a string-example:"abcABC123" ===> 3
 
 function lowercaseCount(str) {
     let count = 0;
@@ -8,7 +8,6 @@ function lowercaseCount(str) {
             count++;
         }
     }
-
     return count;//function value can be replace dby anythng which function returns
 }
 

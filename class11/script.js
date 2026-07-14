@@ -53,6 +53,28 @@ function keypressEvent() {
 
 }
 
+function mouseEnter() {
+    document.getElementById("box").style.backgroundColor = "yellow";
+}
+
+function mouseLeave() {
+    document.getElementById("box").style.backgroundColor = "white";
+}
+
+function mouseDown() {
+    console.log("Mouse button pressed");
+}
+
+function mouseUp() {
+    console.log("Mouse button released");
+}
+
+function showText() {
+    let name = document.getElementById("username").value;
+
+    document.getElementById("result").innerHTML = name;
+}
+
 function handleData() {
     var n = document.getElementById('input-six').value;
     console.log(n);

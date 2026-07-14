@@ -2,7 +2,7 @@
 
 // if() {
 //blck of code
-// }
+// }else
 
 // var x=10;
 // alert('x value is 10');
@@ -13,14 +13,17 @@
 
 var student="rajkumar";
 
-if(student=="rajkumar"){
+if(student=="rajkumarr"){
     console.log("hello raj");
-}else{
+}
+else{
 console.log("wrong input");
 }
 
-let age = 16;  
-if(age >= 18){
+let age = 18;  
+
+
+if(age = 18){
    console.log("Eligible to Vote");
 }
 else{
@@ -34,6 +37,7 @@ console.log('hello world')
 
 var firstName = 'alina'
 var secondname='vamshi';
+
 if (firstName == 'alina') {
     console.log(firstName);//alina
 }
@@ -47,7 +51,7 @@ else {
 }
 
 
-let parvezmarks = 75;
+let parvezmarks = 1;
 
 if(parvezmarks >= 90){
    console.log("Grade A");
@@ -59,18 +63,18 @@ else if(parvezmarks >= 50){
    console.log("Grade C");
 }
 else{
-   console.log("Fail");
+   console.log("pass");
 
 }
 
 // Ternary operator (shortcut syntax for if & else)
 // (condition) ? (its executed if it is true) : (its executed if it is false)
-var stud='akshay'
-var res=(stud=='akshaya') ? ('hello akshay') : ('wrong input');
+var stud='akshay';
+var res=(stud=='akshay') ? ('hello akshay') : ('wrong input');
 console.log(res)
 
 var nums="10";
-var results=(nums=="10") ? ('correct number') : ('wrong number');
+var results=(nums===10) ? ('correct number') : ('wrong number');
 console.log(results)
 
 var result = (firstName == 'alina') ? (firstName) : ('wrong input');
@@ -118,7 +122,7 @@ switch (ag) {// age === case numbers
 }
 
 //increments and decrements
-let count = 5;
+let count = 7;
 count++;
 console.log(count);//6
 
@@ -149,7 +153,7 @@ console.log(count);
 var num = 10;
 var numTwo = 20;
 var add = num + numTwo;//addition
-console.log(add)
+console.log(add)//30
 var sub = numTwo - num;//subtraction
 console.log(sub)
 var mul = num * numTwo;//multiplication
@@ -218,10 +222,15 @@ console.log(t);
 // Assignment Operators
 var val = 20;//assignmnet opearator
 
+
+// var result=val+20;
+// console.log(result)
+
 val += 5;//val = val + 5
 val -= 10;//val = val - 10
 val *= 2;//val = val * 2
 val /= 10;//val = val / 10
+console.log(val)
 
 
 // String Operators (+)
@@ -237,7 +246,7 @@ console.log(20+20+strVal)//40world
 console.log(str + 20 + 20);//hello2020
 console.log(20 + str + 20);//20hello20
 console.log(strVal + 20);//world20
-console.log("20" / 20);//NaN
+console.log("20" / 20);//NaN-not a number
 console.log(Number(''));//0
 console.log('20hello' / 20);//NaN
 console.log('20' + 20);//2020
@@ -392,8 +401,8 @@ else{
    console.log("Stop");
 }
 
-let ab=10;
-let ab=20;
+// let ab=10;
+// let ab=20;
 // var ab=30;
 
 console.log(ab)
