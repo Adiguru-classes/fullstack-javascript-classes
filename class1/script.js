@@ -13,10 +13,80 @@
 
 
 
+console.log("Welcome to JavaScript!");
+// This is a single line comment  
+//comments are ignored b y javascript
+//Temporarily disabling code
+
+/*
+This
+is
+a
+multi-line
+comment
+*/
+
+var studentName = "Raj";
+console.log(studentName);
+
+var studentName = "Raj";
+studentName = "Kiran";//change value or reassignment
+
+console.log(studentName);
+
+let age = 25;
+
+console.log(age);
+age = 26;
+console.log(age);
+
+const country = "India";
+country = "USA";
+console.log(country)//const cant be reassigned
+
+//`var` allows redeclaration and reassignment
+var x = 10;
+var x = 20; // Redeclaration is allowed
+ x = 30;    // Reassignment is allowed
+console.log(x); // 30
+
+// `let` allows reassignment but not redeclaration
+let y = 40;
+// let y = 50; // Error: Cannot redeclare variable
+y = 50;    // Reassignment is allowed
+console.log(y); // 50
+
+// `const` does not allow redeclaration or reassignment
+const z = 60;
+// const z=70
+// z = 70; // Error: Assignment to constant variable
+console.log(z); // 60
+
+//naming rules
+let firstName;
+
+let age;
+
+let student1;
+
+let userName;
+
+let $price;
+
+let _count;
+
+//incorrect naming rules
+// let 1name;
+
+// let first-name;
+
+// let let;
+
+// let class;
 
 
 
-
+//Data types in javascript
 var a= 13 //number,
 var a=14
 console.log(a)//
@@ -39,155 +109,55 @@ console.log(typeof(a))//number
 console.log(typeof(b)); //string
 console.log(typeof(c)); //string
 
+//boolean
+let isLoggedIn = true;
+console.log(isLoggedIn);
+
+//undefined
+let city;//variable exists but no value assigned
+console.log(city);
+
+//null
+let phone = null;
+console.log(phone);//intentionally empty value
 
 
+//multiple variables data
+let name = "Raj";
+let age = 25;
+let city = "Hyderabad";
 
+console.log(name);
+console.log(age);
+console.log(city);
 
+//template literals
+let name = "Raj";
+let age = 25;
 
-let d=20
-console.log(d);
-console.log(typeof(d));
+console.log(`My name is ${name}`);
 
-const e=30
-console.log(e);
+//user inputs
+let name = prompt("Enter your name");
 
-let r="rajkumar"
-console.log(r);
+console.log(name);
 
-var s=30;
-var s=10;
-console.log(s);
+let age = Number(prompt("Enter age"));
 
+console.log(age);
 
+console.log(typeof age);
 
-const name = "John"; // String
+//alert
+alert("Welcome to JavaScript");
 
+//confirm
+let answer = confirm("Are you sure?");
 
+console.log(answer);
 
-console.log(name)
+let length = Number(prompt("Enter length"));
+let width = Number(prompt("Enter width"));
+let area = length * width;
 
-let sarayu='developer';//
-  console.log(sarayu)//developer
-
-        // console.log(vishal_age);
-  let age=20;//integr
-
-
-   let vishal_age=23;
-
-   console.log(vishal_age);
-
-   let num='raj';
-   let num2='kumar';
-   console.log(num+num2);
-
-
-
-  var rajkumar=true;//boolean
-// const name='raj'
-// console.log(name)
-// let greeting = 'Hello, world!'
-
-//1.Scope
-function testVar() {
-    if (true) {
-      var x = 10; // Function-scoped
-    }
-    console.log(x); // 10 (Accessible outside the block)
-  }
-  
-  function testLet() {
-    if (true) {
-      let y = 20; // Block-scoped
-
-    }
-    // console.log(y); // Error: y is not defined (Block-scoped)
-
-  }
-  
-  testVar();
-  testLet();
-
-
-//2.Hoisting
-// console.log(a); // undefined (due to hoisting)
-// var a = 5;
-
-// console.log(b); // Error: Cannot access 'b' before initialization
-// let b = 10;
-
-//3.Reassignment
-
-//`var` allows redeclaration and reassignment
-var x = 10;
-var x = 20; // Redeclaration is allowed
- x = 30;    // Reassignment is allowed
-console.log(x); // 30
-
-// `let` allows reassignment but not redeclaration
-let y = 40;
-// let y = 50; // Error: Cannot redeclare variable
-y = 50;    // Reassignment is allowed
-console.log(y); // 50
-
-// `const` does not allow redeclaration or reassignment
-const z = 60;
-// const z=70
-// z = 70; // Error: Assignment to constant variable
-console.log(z); // 60
-
-//Global scope
-let globalVar = "I am global!"; // Global scope
-
-function showGlobal() {
-  console.log(globalVar); 
-}
-showGlobal(); // Output: I am global!
-console.log(globalVar); // Output: I am global!
-
-//Function scope
-function testVar() {
-    var insideFunction = "I am inside a function";
-    console.log(insideFunction); // Works inside the function
-  }
-  
-  testVar();
-  console.log(insideFunction);
-
-  //block scope
-  if (true) {
-    let blockVar = "I am block-scoped";
-    console.log(blockVar); // Works inside the block
-  }
-  console.log(blockVar)//it dpoesnt work
-
-
-  //scopes and hoisting together
-  function demoScopeHoisting() {
-    console.log(a); // undefined (hoisted but not initialized yet)
-    var a = 5;
-  
-    // console.log(b); // Error: Cannot access 'b' before initialization
-    let b = 10;
-  
-    // Block scope example
-    if (true) {
-      var c = 15; // Function-scoped (accessible throughout the function)
-      let d = 20; // Block-scoped (only accessible inside this block)
-    }
-  
-    console.log(c); // Output: 15 (var is function-scoped)
-    // console.log(d); // Error: d is not defined (let is block-scoped)
-  }
-  
-  demoScopeHoisting();
-
-
-
-  
-
-
-
-
-
-
+console.log(area);

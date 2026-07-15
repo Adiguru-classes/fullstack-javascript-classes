@@ -1,149 +1,333 @@
-//convert number to string
-var x = 10.87;
-console.log(x.toString());//return a string
-console.log(x.toFixed(3));//return a string with a specified decimal places
-console.log(x.toExponential(2));
-console.log(String(x));
+// 1 loop = 1 iteration
+// for loops
+// syntax
+// for(statement1; statement2; statement3) {
+//block of code
+// }
 
-// convert boolean to string
-console.log(String(false));//"false"
-console.log(String(true));//"true"
+// statement 1-> initialization
+// statement2 -> condition
+// statement3 -> inc/dec
 
-// convert string to number
-console.log(Number('20'));//return a number
-console.log(Number(''));//0
-console.log(Number('gdge'));//NaN
+// steps of execution
 
+// st1 -> st2 -> BOC -> st3 ->st2 -> BOC -> st3
 
-// how to capture user input
-function getName() {
-    //capturing user input in a variable
-    var nameVal = document.getElementById('name').value;
-    console.log(nameVal);
-    alert(nameVal);
+//for loop
+for (var j = 5; j >= 0; j--) {
+    console.log(j);//10 9 8 ... 1 0
 }
 
-//Objects
-var firstName = 'alina';
+for (var i = 0; i <= 20; i = i + 3) {
+    console.log(i);//0,2,4,6....20
+}
 
-// creating an object
-// 1. Object literal
-// key/value
-// property/value pair
+for (var i = 1; i <= 20; i = i + 2) {
+    console.log(i);//1 3 5 7 9...19
+}
 
-var person = {
-    name: 'alina',
-    age: 20,
-    designation: 'developer',
-    hobbies: 'dancing',
-    married: true,
-    contact: {
-        mobile: '7878898'
+for (var x = 0; x <= 0; x++) {
+    console.log(x);//
+}
+
+//iterate over array
+var arr = [90, 78, 67, 78, 100];//5
+
+for (var i =0; i<arr.length; i++) {
+    console.log(arr[i]);//90 78 67 78 100
+
+    if (arr[i] == 100) {
+        console.log('found');
+    }
+    // for() {
+
+    // }
+}
+
+var students=["vivek","rohith","x","y","z"]
+for (var i=0;i<students.length;i++){
+    console.log(students[i])
+
+    if(students[i]=='vishal'){
+        console.log("available")
     }
 }
 
-// display/access object values
-console.log(person); 
 
-console.log(person['name']);
-console.log(person.name);
-
-console.log(person.contact);
-console.log(person.contact.mobile);
-
-
-var car = {
-    color: 'red',
-    model: 'XUV09',
-    brand: 'maruti',
-    alloy: 'wheels',
-    millege: 'u',
-    type: 'disesel',
-    price: '79809090',
-    specialFeatures: {
-        detail: 'reverse-parking'
+for(let i = 1; i <= 10; i++){
+    
+    if(i % 2 != 0){
+        console.log(i);
     }
 }
 
-console.log(car.alloy);
-console.log(car.specialFeatures.detail);
 
 
-// 2. Object.create
-var carVal = {
-    color: 'red',
-    model: 'XUV09',
-    brand: 'maruti',
-    alloy: 'wheels',
-    millege: 'u',
-    type: 'diesel',
-    price: '79809090',
-    specialFeatures: {
-        detail: 'reverse-parking'
+let num = 5;
+
+for(let i = 1; i <= 10; i++){
+    console.log(num * i);
+}
+
+
+
+let sum = 0;
+
+for(let i = 1; i <= 5; i++){
+    sum = sum + i;
+}
+
+console.log(sum);
+
+const fruits = ["Apple","Banana","Mango"];
+
+for(let i=0;i<fruits.length;i++){
+    console.log(fruits[i]);
+}
+
+
+//Looping Strings
+const name = "Raj";
+
+for(const l of name){
+    console.log(l);
+}
+
+const word = "JavaScript";
+
+for(let i=0;i<word.length;i++){
+    console.log(word[i]);
+}
+
+//looping objects
+const student = {
+    name:"Raj",
+    age:25,
+    city:"Hyderabad"
+};
+
+for(const key in student){
+    console.log(key);
+}//output:name,age,city
+
+//to get values
+for(const key in student){ //key=name     key=age
+
+    console.log(student[key]);
+}
+
+//to get both keys and values
+for(const key in student){
+    console.log(key  , student[key]);
+}
+
+// infinite loop
+// for(var i = 0; i >= 0; i++){}
+
+
+// while loops
+//syntax
+// while(condition) {
+//block of code
+// }
+
+// let password = "";
+
+// while(password !== "admin"){
+//     password = prompt("Enter Password");
+// }
+
+
+var i=0
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+
+var z = 10;
+while (z >= 0) {
+    console.log(z);//10 9 8 7 6 5 4 3 2 1
+    z--;
+}
+
+
+var z = 10;
+while (z >= 0) {
+    z--;//9 8 7 6 5 4 3 2 1 0 -1
+    console.log(z);
+}
+
+var i = 0;
+while (i < arr.length) {
+    console.log(arr[i]);
+    i++
+}
+
+// infinite loop
+
+// do while
+// do {
+//block of code
+// } while(condition)
+
+var i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+
+var y = 1;
+do {
+    console.log(y);
+} while (y < 0);
+
+// infinite loop
+
+// var a = 10;
+// do {
+//     console.log(a);//10 9
+//     a--;
+// } while (a < 10);
+
+
+// statement
+// break: it will terminate loop/ switch
+// continue: it terminate current loop and continue
+
+
+for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);//90 78 67 78 100
+
+    if (arr[i] == 100) {
+        console.log('found');
+    }
+    // else {
+    //     console.log('not found');
+    // }
+}
+
+
+
+console.log('BREAK');
+
+//90 78 98 89 100
+for (var i = 0; i < arr.length; i++) {
+
+    if (arr[i] === 28) {
+        console.log('found');
+        break;
+        // console.log();
+    }
+    else {
+
     }
 }
 
-console.log(carVal)
+// continue
+// continue: it terminate current loop and continue
 
-var obj = Object.create(carVal);
+console.log('CONTINUE');
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === 78) {
+        console.log('found');
+    }
 
-console.log(obj.color);//color is a property of obj now
-console.log(obj.type);
-
-console.log(typeof (carVal));
-console.log(typeof (obj));
-
-//putting 2 values from one object to another
-var colorVal = carVal.color;
-var modelVal = carVal.model;
-var newObj = {
-    color: colorVal,
-    model: modelVal
+    continue;
+    console.log(arr[i]);
 }
 
-console.log(newObj);
+
+//iterate over strings
+
+var count = 0;
+var str = 'Hi, hellolll';
+
+for (var i = 0; i <str.length; i++) {
+    console.log(str[i]);
+    if (str[i] == 'z') {
+        count++;//2
+        continue;
+        // console.log(str[i]);
+    }
+}
+
+console.log(count);
+
+for (var i = 0; i < str.length; i++) {
+    if (str[i] == 'l') {
+        console.log(i);
+        break;
+        console.log(i);
+    }
+
+    continue;
+}
 
 
-// 3. new keyword with Prototype(function constructor) (ES5)
-// var objVal = new Fun();
+//for loops using array of objects
+let users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 }
+];
 
-// 4. new keyword with classes (ES6)
-// var classVal = new Student();
-
-
-//To get all the keys/property
-console.log(Object.keys(person));//return an array
-
-//To get all the values 
-console.log(Object.values(person));//return an array
-
-
-//delete a property/key from an object
-delete person.name;
-delete person['contact'];
-
-console.log(person);
-
-//Updation 
-person.age = 30;
-person.designation = 'tester';
-console.log(person);
-
-console.log(`${person}`);
-
-console.log('Hi, my hobby is' + person.hobbies);
-
-console.log(`Hi, my hobby is ${person.hobbies}`);
+for (let i = 0; i < users.length; i++) {
+    console.log(users[i].name, users[i].age);//Alice 25
+                                             //Bob 30
+                                            //Charlie 35
+}
 
 
-// adding new after property after creation of object
-person.name = 'alina';
+//for loop using break statement
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        console.log(i)
+        break; // Exit the loop when i equals 5
+    }
+    console.log(i);//0 1 2 3 4
+}
 
-console.log(person);
+//while loop using break statement 
+var i = 0;
+while (i < 10) {
+    console.log(i);//0 1 2 3
+    if (i === 3) {
+        break; // Exit the loop when i equals 3
+    }
+    i++;
+}
 
+//using continue statement in for loop
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Skip the rest of the code in this iteration when i equals 5
+    }
+    console.log(i);//0 1 2 3 4  6 7 8 9
+}
 
-// take input using prompt
+//using continue in while loop
+var i = 0;
+while (i < 10) {
+    i++;
+    if (i === 5) {
+        continue; // Skip the rest of the code in this iteration when i equals 5
+    }
+    console.log(i);//1 2 3 4 6 7 8 9 10
+};
 
-var store = prompt('Please enter name');
+const greet = name => {
+    const message = `Hello, ${name}!`;
+    return message;
+};
 
-console.log(store);
+console.log(greet("Alice")); //give this example withpout using template literals
+
+//finding smallest number from an array
+const a = [12, 8, 130, 5,7,44];
+let smallnum = a[0];  
+for (let i = 1; i < a.length; i++) {
+    if (a[i] < res) {
+        smallnum = a[i];  
+    }
+}
+console.log(smallnum);
