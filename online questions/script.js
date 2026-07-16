@@ -1,5 +1,4 @@
 //1.count lowercase lettrs from a string-example:"abcABC123" ===> 3
-
 function lowercaseCount(str) {
     let count = 0;
 

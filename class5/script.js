@@ -1,6 +1,11 @@
 // 1 loop = 1 iteration
 // for loops
 // syntax
+
+// for (initialization; condition; increment or decrement) {
+
+// }
+// 
 // for(statement1; statement2; statement3) {
 //block of code
 // }
@@ -14,12 +19,31 @@
 // st1 -> st2 -> BOC -> st3 ->st2 -> BOC -> st3
 
 //for loop
-for (var j = 5; j >= 0; j--) {
-    console.log(j);//10 9 8 ... 1 0
+
+for (let i = 1; i <= 5; i++) {
+
+    console.log(i);
+
 }
 
-for (var i = 0; i <= 20; i = i + 3) {
-    console.log(i);//0,2,4,6....20
+console.log('i am rajkumar');
+console.log('i am rajkumar');
+console.log('i am rajkumar')
+console.log('i am rajkumar')
+console.log('i am rajkumar')
+console.log('i am rajkumar')
+
+
+
+for (let i = 1; i <= 5; i++) { //increment
+    console.log("hy,i am rajkumar");
+}
+for (var j = 5; j > 0; j--) {
+    console.log(j);//
+}
+
+for (var i = 0; i <= 20; i = i + 2) {
+    console.log(i);//
 }
 
 for (var i = 1; i <= 20; i = i + 2) {
@@ -30,6 +54,7 @@ for (var x = 0; x <= 0; x++) {
     console.log(x);//
 }
 
+
 //iterate over array
 var arr = [90, 78, 67, 78, 100];//5
 
@@ -38,6 +63,8 @@ for (var i =0; i<arr.length; i++) {
 
     if (arr[i] == 100) {
         console.log('found');
+    }else{
+        console.log('not found')
     }
     // for() {
 
@@ -48,15 +75,16 @@ var students=["vivek","rohith","x","y","z"]
 for (var i=0;i<students.length;i++){
     console.log(students[i])
 
-    if(students[i]=='vishal'){
+    if(students[i]=='x'){
         console.log("available")
     }
 }
 
 
-for(let i = 1; i <= 10; i++){
-    
-    if(i % 2 != 0){
+for(let i = 0; i <= 10; i++){
+    // console.log(i)
+
+    if(i % 2 == 0){
         console.log(i);
     }
 }
@@ -74,12 +102,13 @@ for(let i = 1; i <= 10; i++){
 let sum = 0;
 
 for(let i = 1; i <= 5; i++){
+    // console.log(i)
     sum = sum + i;
+    // console.log(sum)
 }
-
 console.log(sum);
 
-const fruits = ["Apple","Banana","Mango"];
+const fruits = ["Apple","Banana","Mango"];//lenghth -3
 
 for(let i=0;i<fruits.length;i++){
     console.log(fruits[i]);
@@ -87,10 +116,10 @@ for(let i=0;i<fruits.length;i++){
 
 
 //Looping Strings
-const name = "Raj";
+const name = "Raj kumar";
 
-for(const l of name){
-    console.log(l);
+for(const c of name){
+    console.log(c);
 }
 
 const word = "JavaScript";
@@ -131,17 +160,17 @@ for(const key in student){
 //block of code
 // }
 
-// let password = "";
+let password = "";
 
-// while(password !== "admin"){
-//     password = prompt("Enter Password");
-// }
+while(password !== "admin"){
+    password = prompt("Enter Password");
+}
 
 
-var i=0
-while (i < 5) {
+var i=0  //initialisation
+while (i < 5) {   //condition
     console.log(i);
-    i++;
+    i++; //increment
 }
 
 var z = 10;
@@ -163,12 +192,40 @@ while (i < arr.length) {
     i++
 }
 
+let pin = "";
+
+while (pin !== "1234") {
+    pin = prompt("Enter PIN");
+}
+
+ console.log("Login Successful");
+// prompt('enter name')
+
 // infinite loop
 
 // do while
 // do {
 //block of code
 // } while(condition)
+
+//do while lop will execute the code first and checks teh condition next
+let i2 = 1;
+
+do {
+
+    console.log(i2);
+    i++;
+
+} while (i2 <= 5);1,2,3,4,5
+
+// Runs once even if condition is false.
+let number = 10;
+
+do {
+    console.log(number);//10
+
+} while (number < 5);
+
 
 var i = 0;
 do {
@@ -213,7 +270,7 @@ console.log('BREAK');
 //90 78 98 89 100
 for (var i = 0; i < arr.length; i++) {
 
-    if (arr[i] === 28) {
+    if (arr[i] === 78) {
         console.log('found');
         break;
         // console.log();
@@ -226,7 +283,16 @@ for (var i = 0; i < arr.length; i++) {
 // continue
 // continue: it terminate current loop and continue
 
-console.log('CONTINUE');
+for (let i = 1; i <= 10; i++) {
+
+    if (i == 5) {
+        continue;//
+
+    }
+    console.log(i);
+
+}
+
 for (var i = 0; i < arr.length; i++) {
     if (arr[i] === 78) {
         console.log('found');
@@ -235,6 +301,8 @@ for (var i = 0; i < arr.length; i++) {
     continue;
     console.log(arr[i]);
 }
+
+
 
 
 //iterate over strings
@@ -265,11 +333,11 @@ for (var i = 0; i < str.length; i++) {
 
 
 //for loops using array of objects
-let users = [
+et users = [
     { name: "Alice", age: 25 },
     { name: "Bob", age: 30 },
     { name: "Charlie", age: 35 }
-];
+];l
 
 for (let i = 0; i < users.length; i++) {
     console.log(users[i].name, users[i].age);//Alice 25
@@ -326,7 +394,7 @@ console.log(greet("Alice")); //give this example withpout using template literal
 const a = [12, 8, 130, 5,7,44];
 let smallnum = a[0];  
 for (let i = 1; i < a.length; i++) {
-    if (a[i] < res) {
+    if (a[i] < smallnum) {
         smallnum = a[i];  
     }
 }

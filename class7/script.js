@@ -85,6 +85,8 @@ var carVal = {
 
 console.log(carVal)
 
+
+
 var obj = Object.create(carVal);
 
 console.log(obj.color);//color is a property of obj now
@@ -146,3 +148,135 @@ console.log(person);
 var store = prompt('Please enter name');
 
 console.log(store);
+
+
+//array of objects
+var employee = 
+
+[{
+    name: 'alex',
+    age: 20,
+    contact: {
+        number: 889889,
+        address: ''
+    }
+}, {
+    name: 'alina',
+    age: 24,
+    contact: {
+        number: 8709090,
+        address: ''
+    }} ,
+    {
+    name: 'harry',
+    age: 22,
+    contact: {
+        number: 889889,
+        address: '2-7-80'
+    }
+}]
+;
+
+console.log(employee);
+console.log(employee[2].age);
+console.log(employee[2].contact.address);
+employee.push({
+    name: 'alina',
+    age: 24,
+    contact: {
+        number: 8709090,
+        address: ''
+    }
+});
+
+// employee[2].name = 'alex';
+// console.log(employee);
+
+
+// var student={
+
+// name: 'alina',
+// class:"engineering" ,
+// rollno:20
+
+// }
+// console.log(student)
+// console.log(student.name);
+// console.log(student.class);
+// console.log(student.rollno);
+
+// var students=[
+//     {
+//     name: 'alina',
+//     class:"engineering" ,
+//     rollno:20,
+//     contact:{
+//             number:8090,
+//             email:'hL3Zw@example.com'
+//         }
+    
+// },
+// {
+//     name: 'alex',
+//     class:"degree" ,
+//     rollno:21,
+//     contact:{
+//             number:8034,
+//             email:'rahjaw@example.com'
+//     }
+// },
+// {
+//     name: 'harry',
+//     class:"inter" ,
+//     rollno:22,
+//     contact:{
+//             number:7040,
+//             email:'rrrhL3Zw@example.com'
+//     }
+
+// }
+// ]
+// students.push({
+//     name: 'rajkumar',
+//     class:"ece" ,
+//     rollno:25,
+//     contact:{
+//             number:7040,
+//             email:'rrrhL3Zw@example.com'
+//     }
+// })
+// console.log(students);
+// students.unshift({
+//     name: 'rajkumar',
+//     class:"computer science" ,
+//     rollno:25,
+//     contact:{
+//             number:7040,
+//             email:'rrrhL3Zw@example.com'
+//     }
+// })
+
+// console.log(students);
+// console.log(students[1].contact);
+// console.log(students[1].contact.email);
+// console.log(students);
+// console.log(students[1]);
+// console.log(students[1].name);
+// console.log(students[1].class);
+// console.log(students[1].rollno);
+// console.log(students[2].rollno);
+ 
+// console.log(students[1].name);
+// console.log(students[1].class);
+// console.log(students[1].rollno);
+
+//reverse a string using array methods
+// var strVal = 'hihellhdij';//
+// var val = strVal.split('');
+// console.log(val);
+// val.reverse();
+// console.log(val.join(''));
+
+
+//take an array of objects with students with their marks and print the students whose marks are greater then 50
+//take an array of objects with employees objects  and print location hyd employee 
