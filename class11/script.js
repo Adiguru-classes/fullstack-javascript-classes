@@ -1,12 +1,15 @@
 function showMessage(){
-    alert("Hello");
+    alert("hy,i am onclick event");
 }
 
 
-let rajkumar = document.getElementById("btn");
-rajkumar.addEventListener("click", function(){
-    alert("Hello");
-});
+// function showhello(){
+//     alert('hello')
+// }
+// let rajkumar = document.getElementById("btn");
+// rajkumar.addEventListener("click", function(){
+//     alert("Hello");
+// });
 
 
 function getName() {

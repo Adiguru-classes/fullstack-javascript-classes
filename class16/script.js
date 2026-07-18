@@ -1,35 +1,134 @@
-// // Save data
-// localStorage.setItem("username", "raj");
+//basic promise-success
+const promise = new Promise(function (resolve, reject) {
 
-// // Get data
-// let name = localStorage.getItem("username");
-// console.log(name); // Output: raj
+    resolve("Promise Completed Successfully!");
 
-// // // Remove item
-// localStorage.removeItem("username");
+});
 
-// // // Clear all local storage
-// localStorage.clear();
+promise.then(function (message) {
 
-localStorage.setItem("username", "rajkumar");
+    console.log(message);
 
-let user = localStorage.getItem("username");  // "rajkumar"
-console.log(user);
-localStorage.removeItem("username");
-console.log(localStorage.getItem("username")); // null
+});
 
-localStorage.clear();
+//basic promsie-failure
+const promis = new Promise(function (resolve, reject) {
 
-//session storage
-// Save data
-sessionStorage.setItem("theme", "dark");
+    reject("Something Went Wrong!");
 
-// Get data
-let theme = sessionStorage.getItem("theme");  // "dark"
-console.log(theme)
+});
 
-// Remove a specific item
-sessionStorage.removeItem("theme");
+promis.catch(function (error) {
 
-// Clear all sessionStorage
-sessionStorage.clear();
+    console.log(error);
+
+});
+
+const downloadFile = new Promise(function (resolve, reject) {
+
+    console.log("Downloading File...");
+
+    setTimeout(function () {
+
+        resolve("Download Completed!");
+
+    }, 3000);
+
+});
+
+downloadFile.then(function (message) {
+
+    console.log(message);
+
+});
+
+//Success & Failure with setTimeout
+const internetAvailable = false;
+
+const fetchData = new Promise(function (resolve, reject) {
+
+    console.log("Connecting to Server...");
+
+    setTimeout(function () {
+
+        if (internetAvailable) {
+
+            resolve("Data Loaded Successfully!");
+
+        } else {
+
+            reject("No Internet Connection!");
+
+        }
+
+    }, 3000);
+
+});
+
+fetchData
+.then(function (data) {
+
+    console.log(data);
+
+})
+.catch(function (error) {
+
+    console.log(error);
+
+});
+
+
+//Using .finally()
+const payment = new Promise(function (resolve, reject) {
+
+    const paymentSuccess = true;
+
+    if (paymentSuccess) {
+
+        resolve("Payment Successful");
+
+    } else {
+
+        reject("Payment Failed");
+
+    }
+
+});
+
+payment
+.then(function (message) {
+
+    console.log(message);
+
+})
+.catch(function (error) {
+
+    console.log(error);
+
+})
+.finally(function () {
+
+    console.log("Thank You for Visiting!");
+
+});
+
+//promise chain -introduction
+const student = new Promise(function (resolve, reject) {
+
+    resolve("Raj");
+
+});
+
+student
+.then(function (name) {
+
+    console.log(name);
+
+    return "JavaScript";
+
+})
+.then(function (course) {
+
+    console.log(course);
+
+});

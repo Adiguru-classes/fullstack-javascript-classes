@@ -1,67 +1,91 @@
-function handleRequest() {
-    var xhttp = new XMLHttpRequest;
+//Local Storage Methods;
+// setItem()
+// getItem()
+// removeItem()
+// clear()
 
-    xhttp.onreadystatechange = function () {
-        if (xhttp.status == 201 && this.readyState == 4) {
-            document.getElementById('loading').style.display = 'none'
-            console.log('post created');
-        }
-        else {
-            document.getElementById('loading').style.display = 'block'
-        }
-    }
+// setItem()-Stores data.
+//localStorage.setItem(key, value);
 
-    // Data which will be sent to server
-    var obj = {
-        userId: 1,
-        id: 101,
-        title: 'Post request',
-        body: 'making apost request'
-    }
-
-    //making a post request
-    xhttp.open('POST', 'https://jsonplaceholder.typicode.com/posts/', true);
-    xhttp.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-    xhttp.send(JSON.stringify(obj));
-
-}
+localStorage.setItem("name", "Raj");
+// localStorage.setItem("username", "rajkumar");
 
 
-function displayData() {
-    var n = document.getElementById('name').value;
+//getItem-gets data
+const name = localStorage.getItem("name");
+console.log(name);
+let user = localStorage.getItem("username");  // "rajkumar"
+console.log(user);
 
-    try {
-        if (n.trim() === '') {
-            throw 'Please enter correct data';
-        }
-        else if (n.length <= 3) {
-            throw 'Please enter a valid name';
-        }
-        else {
-            alert(n);
-        }
-    }
+//removeItem()- Deletes one item.
+//  localStorage.removeItem("username");
+// console.log(localStorage.getItem("username")); // null
 
-    catch (err) {
-        alert(err);
-    }
+//clear()
+// localStorage.clear();
 
-    finally {
-        console.log('finally ' + n);
-        document.getElementById('name').value = '';
-    }
-}
+//session storage
+// Save data
+sessionStorage.setItem("theme", "dark");
 
-//callback functions in javacsript
-function fetchData(callback) {
-    setTimeout(() => {
-        console.log("Data fetched from server");
-        callback();  // Call the function when data is ready
-    }, 2000);  // Simulate 2 seconds delay
-}
+// Get data
+let theme = sessionStorage.getItem("theme");  // "dark"
+console.log(theme)
 
-function displayData() {
-    console.log("Displaying data");
-}
+// Remove a specific item
+sessionStorage.removeItem("theme");
 
-fetchData(displayData);  // Now, displayData is called after fetchData is done
+// Clear all sessionStorage
+sessionStorage.clear();
+
+//practical example
+const input = document.getElementById("name");
+
+const button = document.getElementById("save");
+
+button.addEventListener("click", function () {
+
+    localStorage.setItem("username", input.value);
+
+});
+
+//display stored data
+const username = localStorage.getItem("username");
+console.log(username);
+
+//auto fill input
+const inputt = document.getElementById("name");
+inputt.value = localStorage.getItem("username");
+
+//store numbers
+localStorage.setItem("age", 25);
+console.log(localStorage.getItem("age"));
+
+
+//store objects
+const student = {
+    name: "Raj",
+    age: 25
+};
+localStorage.setItem(
+    "student",
+    JSON.stringify(student)
+
+);
+
+const students = JSON.parse(
+
+    localStorage.getItem("students")
+);
+
+console.log(student);
+
+//session storage-Session Storage stores data only until the browser tab is closed.
+//sessionStorage.setItem()
+//sessionStorage.getItem()
+//sessionStorage.removeItem()
+//sessionStorage.clear()
+
+sessionStorage.setItem("city", "Hyderabad");
+
+console.log(sessionStorage.getItem("city"));

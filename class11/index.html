@@ -14,14 +14,18 @@
 </button>
 
 <!-- event with addeventlistener -->
-<button id= "btn">
+<button id= "btn" onclick="showhello()">
     Click Me
 </button>
 
     <form>
       <input type="text" placeholder="Please enter name" id="name" />
     </form>
-    <button onclick="getName()">click me</button>
+    <button onclick="getName()">click get name</button>
+        <h1 id="display" onmouseover="alert('hello')">  </h1>
+
+    
+
 
 <form id="myForm">
     <input type="text">
@@ -42,7 +46,6 @@
     </div>
     <!-- <button mouseover="changeColor()" id="hover-button" style="background-color:pink">hover button</button> -->
 
-    <p id="display" onmouseover="alert('hello')">  </p>
 
 
 
@@ -125,7 +128,7 @@ style="display:none;"
     <!-- preventDefault() -->
     <input type="checkbox" id="check" />
 
-    <a href="https://www.amazon.com" id="amazon-data">Amazon</a>
+    <!-- <a href="https://www.amazon.com" id="amazon-data">Amazon</a> -->
 
     <!-- external js -->
     <script src="script.js"></script>

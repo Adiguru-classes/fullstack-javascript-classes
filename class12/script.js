@@ -2,115 +2,110 @@
 
 // }, milliseconds);
 
+//example-1
+// setTimeout(function(){
 
-setTimeout(function(){
+//     alert("Welcome to JavaScript");
 
-    alert("Welcome to JavaScript");
+// },5000);
 
-},5000);
+// example-2
+// console.log("Program Started");
+// setTimeout(function(){
+//     console.log("Hello Students");
+// },3000);
+// console.log("Program Ended");
 
-console.log("Program Started");
-setTimeout(function(){
-    console.log("Hello Students");
-},3000);
+//example-3 calling function after few seconds
+// function greet(){
+//     console.log("Good Morning");
 
-console.log("Program Ended");
-
-//calling function after few seconds
-function greet(){
-
-    console.log("Good Morning");
-
-}
-
-setTimeout(greet,3000);
+// }
+// setTimeout(greet,3000);
 
 //clear timer
-const timer = setTimeout(function(){
+// const timer = setTimeout(function(){
+//     console.log("OTP Expired");
+// },10000);
+ 
+//  clearTimeout(timer);
 
-    console.log("OTP Expired");
+// const timer = setTimeout(function(){
 
-},10000);
+//     console.log("OTP Expired");
 
-clearTimeout(timer);
+// },10000);
+
+// setTimeout(function(){
+
+//     console.log("OTP Verified");
+
+//     clearTimeout(timer);
+
+// },5000);
 
 //setInterval-Runs repeatedly after every given interval.
-setInterval(function(){
+// setInterval(function(){
 
-    console.log("Hello");
+//     console.log("Hello");
 
-},1000);
+// },1000);
 
 //Every second Current time updates.
-setInterval(function(){
+// setInterval(function(){
+//     console.log(new Date());
 
-    console.log(new Date());
+// },1000);
 
-},1000);
+// let count = 1;
+// setInterval(function(){
 
-//let count = 1;
+//     console.log(count);
+//     count++;
 
-setInterval(function(){
-
-    console.log(count);
-
-    count++;
-
-},1000);
+// },1000);
 
 //clear interval
-let count = 1;
+// let count = 1;
 
-const timerr = setInterval(function(){
+// const timerr = setInterval(function(){
 
-    console.log(count);
+//     console.log(count);
 
-    count++;
+//     count++;
 
-    if(count==6){
+//     if(count==6){
 
-        clearInterval(timerr);
+//         clearInterval(timerr);
 
-    }
+//     }
 
-},1000);
+// },1000);
 
 //mini project example
-let time = 10;
+// let time = 10;
 
-const timerrr = setInterval(function(){
+// const timerrr = setInterval(function(){
 
-    console.log(time);
+//     console.log(time);
 
-    time--;
+//     time--;
 
-    if(time<0){
+//     if(time<0){
 
-        clearInterval(timerrr);
+//         clearInterval(timerrr);
 
-        console.log("Time Up");
+//         console.log("Time Up");
 
-    }
+//     }
 
-},1000);
-
-
-const colors = [
-
-"red",
-
-"blue",
-
-"green",
-
-"yellow",
-
-"pink"
-
-];
+// },1000);
 
 
-// mini task-color changer
+
+//mini task-color changer
+
+// const colors = ["red","blue","green","yellow","pink"];
 
 // let index=0;
 
@@ -130,28 +125,28 @@ const colors = [
 
 
 //mini task 
-const heading =
-document.getElementById("heading");
+// const heading =
+// document.getElementById("heading");
 
-setTimeout(function(){
+// setTimeout(function(){
 
-heading.innerText="JavaScript Class";
+// heading.innerText="JavaScript Class";
 
-},3000);
+// },3000);
 
-//mini task 
-const countt =
-document.getElementById("count");
+// //mini task 
+// const countt =
+// document.getElementById("count");
 
-let number=0;
+// let number=0;
 
-setInterval(function(){
+// setInterval(function(){
 
-number++;
+// number++;
 
-countt.innerText=number;
+// countt.innerText=number;
 
-},1000);
+// },1000);
 
 
 //tasks for studemnts
