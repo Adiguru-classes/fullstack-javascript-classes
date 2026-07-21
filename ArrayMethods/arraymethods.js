@@ -1,12 +1,14 @@
 //1.forEach() method-Used to perform an action on every element. It DOES NOT return a new array,it only prints individual values
+
+
 const raj= [10,20,30];
 
 // nums.forEach(function(number){
 //     console.log(number);
 // });//output:10 20 30
 //  for(var i=1;i<10;i++)
-raj.forEach((n)=>{
-    console.log(n);//10 20 30
+raj.forEach((a)=>{
+    console.log(a);//10 20 30
 });
 
 //same example with loop
@@ -18,9 +20,8 @@ raj.forEach((n)=>{
 // }//output 10,20,20
 
 const students = ["Raj","Ravi","Kiran"];
-
-students.forEach(student=>{
-    console.log("Welcome",student);
+students.forEach(s=>{
+    console.log("Welcome",s);
 });//Welcome Raj
    //Welcome Ravi
    //Welcome Kiran
@@ -28,8 +29,8 @@ students.forEach(student=>{
 //2. map() it performs an actiuon on every elemnt from an array but-it creates a new array
 const numbers = [1,2,3];
 
-const doubled = numbers.map(num=>{
-    return num*2;
+const doubled = numbers.map(n=>{
+    return n*2;
 });
 
 console.log(doubled);//[2,4,6]
@@ -64,7 +65,7 @@ const passed=stud.filter(student=>{
 console.log(passed);
 
 //4.find() method-returns only the first matching element
-const num=[5,7,12,20,30];
+const num=[6,5,7,20,30];
 
 const even=num.find(num=>{
     return num%2===0;
@@ -76,17 +77,17 @@ console.log(even);
 const i=[5,7,12,20];
 
 const index=i.findIndex(num=>{
-    return num===5;
+    return num===12;
 });
 
 console.log(index);//output 2
 
 //6.reduce()-Reduce an entire array into ONE value.
-const val=[10,20,30,73];
+const val=[10,20,30,40];
 
 const total=val.reduce((sum,current)=>{
     return sum+current;
-},9);
+},7);
 
 console.log(total);//62
 
@@ -98,8 +99,8 @@ const res=avg.reduce((total,current)=>{
 
 console.log(res);
 
-//7.some() method checks whether atleat one element satisfies the condition
-const a=[5,7,9,11];
+//7.some() method checks whether atleat one element satisfies the condition=gives output in true or false or boolean
+const a=[5,7,9,11,12];
 
 const answer=a.some(num=>{
     return num%2===0;
@@ -119,18 +120,16 @@ console.log(r);//true
 //9.includes()-Checks whether an element exists.
 const fruits=["Apple","Banana","Orange"];
 
-console.log(fruits.includes("Bananaa"));//true
+console.log(fruits.includes("Banana"));//true
 
 //10.sort() method-it Sorts elements.
 const c=[30,40,10,20];
 
-c.sort((a,b)=>a-b);
-
-console.log(numbers);
+const numberss=c.sort((a,b)=>a-b);
+console.log(numberss);
 
 //11.reverse() method-it reverses an array
 const d=[1,2,3];
-
 d.reverse();
 
 
@@ -140,12 +139,14 @@ console.log(numbers);//3,2,1
 
 
 //12.call back function
-function greet(name) {
-    console.log("Hello " + name);
-}
+// function greet(name) {
+//     console.log("Hello " + name);
+// }
 
-function processUser(callback) {
-    callback("Raj");
-}
+// function processUser(callback) {
+//     callback("Raj");
+// }
 
-processUser(greet); 
+// processUser(greet); 
+
+

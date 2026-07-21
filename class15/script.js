@@ -7,47 +7,47 @@
 // setItem()-Stores data.
 //localStorage.setItem(key, value);
 
-localStorage.setItem("name", "Raj");
+localStorage.setItem("name", "rohith");
 // localStorage.setItem("username", "rajkumar");
 
 
 //getItem-gets data
-const name = localStorage.getItem("name");
-console.log(name);
-let user = localStorage.getItem("username");  // "rajkumar"
-console.log(user);
+// const n = localStorage.getItem("name");
+// console.log(n);
+
+// let user = localStorage.getItem("username");  // "rajkumar"
+// console.log(user);
 
 //removeItem()- Deletes one item.
-//  localStorage.removeItem("username");
-// console.log(localStorage.getItem("username")); // null
+//  localStorage.removeItem("name");
+// console.log(localStorage.getItem("name")); // null
 
 //clear()
-// localStorage.clear();
+//  localStorage.clear();
 
 //session storage
 // Save data
-sessionStorage.setItem("theme", "dark");
+// sessionStorage.setItem("theme", "dark");
 
 // Get data
-let theme = sessionStorage.getItem("theme");  // "dark"
-console.log(theme)
+// let theme = sessionStorage.getItem("theme");  // "dark"
+// console.log(theme)
 
 // Remove a specific item
-sessionStorage.removeItem("theme");
+// sessionStorage.removeItem("theme");
 
 // Clear all sessionStorage
-sessionStorage.clear();
+// sessionStorage.clear();
 
 //practical example
-const input = document.getElementById("name");
+// const input = document.getElementById("name");
+// const button = document.getElementById("save");
 
-const button = document.getElementById("save");
+// button.addEventListener("click", function () {
 
-button.addEventListener("click", function () {
+//     localStorage.setItem("username", input.value);
 
-    localStorage.setItem("username", input.value);
-
-});
+// });
 
 //display stored data
 const username = localStorage.getItem("username");
@@ -89,3 +89,6 @@ console.log(student);
 sessionStorage.setItem("city", "Hyderabad");
 
 console.log(sessionStorage.getItem("city"));
+
+
+//create CRUD app with local stortage for movies or FAVOURITE HOBBIES

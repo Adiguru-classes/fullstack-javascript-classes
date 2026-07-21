@@ -1,134 +1,178 @@
-//basic promise-success
-const promise = new Promise(function (resolve, reject) {
+//GET request-load data from message.txt
+function loadMessage() {
 
-    resolve("Promise Completed Successfully!");
+    fetch("message.txt")
+        .then(function (response) {
+             console.log(response);
+            return response.text();//we convert resposne object into text
 
+        }) .then(function (message) {
+
+            document.getElementById("output").textContent = message;
+
+        })
+
+        .catch(function () {
+
+            console.log("Error");
+
+        });
+
+}
+
+//load data from student.json
+function loadStudent() {
+
+    fetch("student.json")
+
+        .then(function (response) {
+
+            return response.json();//here we convert json object to normal javascript object
+
+        })
+
+        .then(function (student) {
+
+            console.log(student);
+
+            document.getElementById("output").innerHTML =
+
+                `
+                Name : ${student.name}<br>
+                Age : ${student.age}<br>
+                City : ${student.city}
+                `;
+
+        });
+
+}
+
+loadStudent()
+
+//console data frpom public api
+function loadUsers() {
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+
+        .then(function (response) {
+
+            return response.json();
+
+        })
+
+        .then(function (users) {
+
+            console.log(users);
+
+        })
+
+        .catch(function () {
+
+            console.log("Error");
+
+        });
+
+}
+loadUsers();
+
+//console only user names
+fetch("https://jsonplaceholder.typicode.com/users")
+
+.then(function(response){
+
+    return response.json();
+
+}).then(function(users){
+
+    users.forEach(function(user){
+
+        console.log(user.name);
+
+    });
 });
 
-promise.then(function (message) {
 
-    console.log(message);
+//POST request
+fetch("https://jsonplaceholder.typicode.com/posts", {
 
-});
+    method: "POST",
 
-//basic promsie-failure
-const promis = new Promise(function (resolve, reject) {
+    headers: {
 
-    reject("Something Went Wrong!");
+        "Content-Type": "application/json" //telling the brwser about data format while sending-it labels teh poarcel with dat format ex:html,text,json
 
-});
+    },
 
-promis.catch(function (error) {
+    body: JSON.stringify({  //internet cant send js objects directly,The server expects JSON text,it convert javascript object to json "{\"title\":\"JavaScript\",\"body\":\"Learning Fetch API\",\"userId\":1}"-it packs the parcel to json
 
-    console.log(error);
+        title: "JavaScript",
 
-});
+        body: "Learning Fetch API",
 
-const downloadFile = new Promise(function (resolve, reject) {
+        userId: 1
 
-    console.log("Downloading File...");
+    })
 
-    setTimeout(function () {
+})
 
-        resolve("Download Completed!");
+.then(function(response){
 
-    }, 3000);
+    return response.json();
 
-});
+})
 
-downloadFile.then(function (message) {
-
-    console.log(message);
-
-});
-
-//Success & Failure with setTimeout
-const internetAvailable = false;
-
-const fetchData = new Promise(function (resolve, reject) {
-
-    console.log("Connecting to Server...");
-
-    setTimeout(function () {
-
-        if (internetAvailable) {
-
-            resolve("Data Loaded Successfully!");
-
-        } else {
-
-            reject("No Internet Connection!");
-
-        }
-
-    }, 3000);
-
-});
-
-fetchData
-.then(function (data) {
+.then(function(data){
 
     console.log(data);
 
-})
-.catch(function (error) {
+});
 
-    console.log(error);
+//PUT request
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+
+    method: "PUT",
+
+    headers: {
+
+        "Content-Type": "application/json"
+
+    },
+
+    body: JSON.stringify({
+
+        id: 1,
+
+        title: "Updated Title",
+
+        body: "Updated Content",
+
+        userId: 1
+
+    })
+
+})
+
+.then(function(response){
+
+    return response.json();
+
+})
+
+.then(function(data){
+
+    console.log(data);
 
 });
 
+//DELETE request
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
 
-//Using .finally()
-const payment = new Promise(function (resolve, reject) {
-
-    const paymentSuccess = true;
-
-    if (paymentSuccess) {
-
-        resolve("Payment Successful");
-
-    } else {
-
-        reject("Payment Failed");
-
-    }
-
-});
-
-payment
-.then(function (message) {
-
-    console.log(message);
+    method: "DELETE"
 
 })
-.catch(function (error) {
 
-    console.log(error);
+.then(function(response){
 
-})
-.finally(function () {
-
-    console.log("Thank You for Visiting!");
-
-});
-
-//promise chain -introduction
-const student = new Promise(function (resolve, reject) {
-
-    resolve("Raj");
-
-});
-
-student
-.then(function (name) {
-
-    console.log(name);
-
-    return "JavaScript";
-
-})
-.then(function (course) {
-
-    console.log(course);
+    console.log("Deleted Successfully");
 
 });

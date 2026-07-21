@@ -1,1 +1,3 @@
-hy welcome,we are learning fetch method
+resolve() and reject() are used by the code that creates a Promise.
+
+.then() and .catch() are used by the code that consumes (uses) that Promise.

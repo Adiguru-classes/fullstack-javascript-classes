@@ -3,34 +3,54 @@
 // function functionname() {
 
 // }
+// console.log('first')
+// setTimeout(function() {console.log("second");}, 3000); //1000ms=1 sec
+// console.log('third');
 
-// function Raj() {
-//     console.log("Hello Ramresh!");
-//   }
+//basic function
+function k(){ //declaring the function
+    console.log("helloo world"); //function block of code
+  }
+// k(); 
+k()//calling the function
 
+ function j(){
+    k()
+    console.log('i am j')
+ }
+j()
+
+//  var a='rajkumar';
+//  console.log(a)
 //   raj(); // Output: Hello ramesh!
   
-//   let raj=function(){
-//             console.log("Hello Ramresh!");
-//   }
-//   raj() //output : Hello Ramresh!
+//function assigning to another avriable
+  let rajj=function(){
+            console.log("Hello Rajkumar!");
+  }
+  rajj() //output : Hello Ramresh!
 
-//   function add(a, b) {
-//     return a + b;
-//   }
-//   let result = add(5, 7);
-//   console.log(result);  // Output: 12
+  let a=10;
+  let b=7;
+
+  function addd(a, b) {
+        console.log(a+b)
+     return a + b;
+  }
+//   addd(5,7)
+  let resultt = addd(5, 7);
+  console.log(resultt);  // Output: 12
+
+  let vall=resultt +10;
+  console.log(vall)
   
-//   const multiply = function(a, b) {
-//     return a * b;
-//   };
-//   let result=  multiply(5, 7);
-//   console.log(result); // Output: 35
+  const multiplyy = function(a, b) {
+    return a * b;
+  };
+  let resulttt=  multiplyy(5, 7);
+  console.log(resulttt); // Output: 35
 
-  setTimeout(function() {
-
-    console.log("Anonymous function!");
-  }, 2000);
+  setTimeout(function() {console.log("Anonymous function!");}, 3000); //1000ms=1 sec
 
 //   function greet(name = "Guest") {
 //     console.log("Hello, " + name + "!");
@@ -52,6 +72,7 @@
 
 //arrow function:A shorter syntax for function expressions, introduced in ES6.
 //Arrow functions do not have their own this context and cannot be used as constructors.
+//arrow function;
 const Raj = () => {
     console.log("Hello, World!");
 };
@@ -150,19 +171,19 @@ console.log(r);
 
 
 // Hoisting
-num = 90;//initializing
-console.log(num);//using the variable
-var num;//declaration
+// num = 90;//initializing
+// console.log(num);//using the variable
+// var num;//declaration
 
 
-//initialization are not hoisted
-var t;//declaration
-console.log(t);//
+// //initialization are not hoisted
+// var t;//declaration
+// console.log(t);//
 
-t = 100;//initialization
+// t = 100;//initialization
 
-//ideal way
-var val = 20;
+// //ideal way
+// var val = 20;
 
 
 // Timing events methods
@@ -176,16 +197,16 @@ var val = 20;
 // }, 4000);//4 sec
 
 
-setInterval(function () {
-    console.log('set Interval');
-}, 2000);//2 sec
+// setInterval(function () {
+//     console.log('set Interval');
+// }, 2000);//2 sec
 
-function displayUser(user) {
-    console.log(`Name: ${user.name}, Age: ${user.age}`);
-}
-const user = { name: "Bob", age: 25 };
-// Passing an object as an argument
-displayUser(user); // Output: Name: Bob, Age: 25
+// function displayUser(user) {
+//     console.log(`Name: ${user.name}, Age: ${user.age}`);
+// }
+// const user = { name: "Bob", age: 25 };
+// // Passing an object as an argument
+// displayUser(user); // Output: Name: Bob, Age: 25
 
 
 // task

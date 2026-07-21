@@ -2,16 +2,22 @@
 <html>
 
 <head>
-    <title>HTTP requests with fetch</title>
+    <title>prmosies</title>
 </head>
 
 <body>
 
-    <button onclick="loadMessage()">
-        Load Message
-    </button>
+    <h2>Click to Load Message</h2>
+    <button onclick="loadMessage()">Load</button>
+    <p id="out"></p>
 
-    <h2 id="output"></h2>
+
+    <h2>Get User Info</h2>
+    <button onclick="getUser()">Fetch User</button>
+
+    <p id="output" style="font-weight: bold;"></p>
+
+
 
     <script src="script.js"></script>
 
