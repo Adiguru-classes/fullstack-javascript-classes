@@ -1,14 +1,67 @@
+//promise has 3 states pending,success and rejected
+
+// console.log("Before Fetch");
+
+// const promise = fetch("https://jsonplaceholder.typicode.com/users");
+
+// console.log(promise);//pending
+
+// console.log("After Fetch");
+
+//success state
+// const prom = fetch("https://jsonplaceholder.typicode.com/users");
+
+// console.log("Immediately:", prom);
+
+// prom.then(function(r){
+
+//     console.log("Success!");
+
+//     console.log(r);
+
+// });
+
+
+//rejected state
+fetch("https://invalid-domain-12345.com/users")//invalid url
+
+.then(function(response){
+
+    console.log(response);
+
+})
+
+.catch(function(error){
+
+    console.log(error);
+
+});
+
+//promise settimeout
+// const promise = fetch("https://jsonplaceholder.typicode.com/users");
+
+// console.log(promise);
+
+// setTimeout(function () {
+
+//     console.log("After 5 Seconds:");
+
+//     console.log(promise);
+
+// }, 5000);
+
+
 //GET request-load data from message.txt
 function loadMessage() {
 
     fetch("message.txt")
-        .then(function (response) {
-             console.log(response);
-            return response.text();//we convert resposne object into text
+        .then(function (res) {
+            console.log(res);
+            return res.text();//we convert resposne object into text
 
-        }) .then(function (message) {
+        }) .then(function (a) {
 
-            document.getElementById("output").textContent = message;
+            document.getElementById("output").textContent = a;
 
         })
 
@@ -33,14 +86,14 @@ function loadStudent() {
 
         .then(function (student) {
 
-            console.log(student);
+            console.log(s);
 
             document.getElementById("output").innerHTML =
 
                 `
-                Name : ${student.name}<br>
-                Age : ${student.age}<br>
-                City : ${student.city}
+                Name : ${s.name}<br>
+                Age : ${s.age}<br>
+                City : ${s.city}
                 `;
 
         });
@@ -91,6 +144,64 @@ fetch("https://jsonplaceholder.typicode.com/users")
     });
 });
 
+fetch("https://fakestoreapi.com/products")
+    .then(function(response) {
+
+        return response.json();
+
+    })
+    .then(function(products) {
+
+        console.log(products);
+
+    })
+    .catch(function(error) {
+
+        console.log(error);
+
+    });
+
+    const productsContainer = document.getElementById("products");
+
+fetch("https://fakestoreapi.com/products")
+
+.then(function(response){
+
+    return response.json();
+
+})
+
+.then(function(products){
+
+    products.forEach(function(product){
+
+        productsContainer.innerHTML += `
+
+            <div>
+
+                <h2>${product.title}</h2>
+
+                <img src="${product.image}" width="150">
+
+                <p>Price: $${product.price}</p>
+                <p>category:"${product.category}</p>
+             <p>description</p>
+
+                <hr>
+
+            </div>
+
+        `;
+
+    });
+
+})
+
+.catch(function(error){
+
+    console.log(error);
+
+});
 
 //POST request
 fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -99,7 +210,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
     headers: {
 
-        "Content-Type": "application/json" //telling the brwser about data format while sending-it labels teh poarcel with dat format ex:html,text,json
+        "Content-Type": "application/json" //telling the brwser about data format while sending-it labels teh poarcel with data format ex:html,text,json
 
     },
 
@@ -127,7 +238,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 });
 
-//PUT request
+//PUT request or update request
 fetch("https://jsonplaceholder.typicode.com/posts/1", {
 
     method: "PUT",
@@ -142,7 +253,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1", {
 
         id: 1,
 
-        title: "Updated Title",
+        title: "Updated Titlee",
 
         body: "Updated Content",
 

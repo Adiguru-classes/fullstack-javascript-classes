@@ -184,7 +184,7 @@ console.log(numss);
 //reverse a string (use array method)
 
 
-//take an array and reverse it
+//take an array and reverse it wiyhout using inbuilt method
 //take an array of numbers and covert it to descending order
 //take an array of sportsmen object print whose country in india
 

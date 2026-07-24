@@ -1,4 +1,4 @@
-//1.count lowercase lettrs from a string-example:"abcABC123" ===> 3
+//1.count lowercase lettrs from a string-example:"abcdABC123" ===> 3
 function lowercaseCount(str) {
     let count = 0;
 
@@ -10,7 +10,7 @@ function lowercaseCount(str) {
     return count;//function value can be replace dby anythng which function returns
 }
 
-console.log(lowercaseCount("abcABC123"));//3
+console.log(lowercaseCount("abc@ABCd123"));//3
 
 //shorter version
 function lowercaseCount(str){
@@ -39,12 +39,12 @@ function whatday(num) {
     }
 }
 
-console.log(whatday(2));
+console.log(whatday(4));
 
 //3.calculate teh age
 
 function calculateAge(birthYear, currentYear) {
-    let difference = currentYear - birthYear;
+    let difference = currentYear - birthYear;//31
 
     if (difference > 0) {
         return "You are " + difference + " years old.";
@@ -55,4 +55,4 @@ function calculateAge(birthYear, currentYear) {
     }
 }
 
-console.log(calculateAge(1996, 2026));
+console.log(calculateAge(1995, 2026));

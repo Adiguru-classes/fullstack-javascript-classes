@@ -2,7 +2,6 @@
 
 
 const raj= [10,20,30];
-
 // nums.forEach(function(number){
 //     console.log(number);
 // });//output:10 20 30
@@ -10,7 +9,6 @@ const raj= [10,20,30];
 raj.forEach((a)=>{
     console.log(a);//10 20 30
 });
-
 //same example with loop
 // const numbers = [10,20,30];
 // for(let i=0;i<numbers.length;i++){
@@ -28,7 +26,6 @@ students.forEach(s=>{
 
 //2. map() it performs an actiuon on every elemnt from an array but-it creates a new array
 const numbers = [1,2,3];
-
 const doubled = numbers.map(n=>{
     return n*2;
 });
@@ -37,7 +34,7 @@ console.log(doubled);//[2,4,6]
 
 
 const prices=[100,200,300];
-const gstPrices=prices.map(price=>{
+const gstPrices=prices.forEach(price=>{
     return price+18;
 });
 
@@ -59,13 +56,13 @@ const stud=[
 ];
 
 const passed=stud.filter(student=>{
-    return student.marks>=50;
+    return student.marks<=50;
 });
 
 console.log(passed);
 
 //4.find() method-returns only the first matching element
-const num=[6,5,7,20,30];
+const num=[5,7,20,6,30];
 
 const even=num.find(num=>{
     return num%2===0;
@@ -77,17 +74,17 @@ console.log(even);
 const i=[5,7,12,20];
 
 const index=i.findIndex(num=>{
-    return num===12;
+    return num===5;
 });
 
 console.log(index);//output 2
 
 //6.reduce()-Reduce an entire array into ONE value.
-const val=[10,20,30,40];
+const val=[7,23,32,48];
 
 const total=val.reduce((sum,current)=>{
     return sum+current;
-},7);
+});
 
 console.log(total);//62
 
@@ -100,7 +97,7 @@ const res=avg.reduce((total,current)=>{
 console.log(res);
 
 //7.some() method checks whether atleat one element satisfies the condition=gives output in true or false or boolean
-const a=[5,7,9,11,12];
+const a=[5,7,9,11,13];
 
 const answer=a.some(num=>{
     return num%2===0;
@@ -109,7 +106,7 @@ const answer=a.some(num=>{
 console.log(answer);//true
 
 //8. every()-checks whether all elements satisfies the condition
-const b=[2,4,6,7];
+const b=[2,4,6,38];
 
 const r=b.every(num=>{
     return num%2===0;
@@ -120,10 +117,10 @@ console.log(r);//true
 //9.includes()-Checks whether an element exists.
 const fruits=["Apple","Banana","Orange"];
 
-console.log(fruits.includes("Banana"));//true
+console.log(fruits.includes("Bananaa"));//true
 
 //10.sort() method-it Sorts elements.
-const c=[30,40,10,20];
+const c=[30,40,10,20]; //[30,40,10,20] //[30,10,40,20] //[30,10,20,40] //[10,30,20,40] //[10,20,30,40]
 
 const numberss=c.sort((a,b)=>a-b);
 console.log(numberss);
@@ -132,6 +129,19 @@ console.log(numberss);
 const d=[1,2,3];
 d.reverse();
 
+
+// let e=[1,2,3,4];
+// for(i=e.length-1;i>=0;i--){
+//     console.log(e[i]);
+// }
+
+const arr = [1, 2, 3, 4, 5];
+const reversedArr = [][];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArr.push(arr[i]);
+}
+console.log(reversedArr); // [5, 4, 3, 2, 1]
 
 
 console.log(numbers);//3,2,1
@@ -150,3 +160,45 @@ console.log(numbers);//3,2,1
 // processUser(greet); 
 
 
+const rajkumar={
+    name:'raj',
+    age:30,
+    location:'sangareddy',
+    address:{
+        H:2-7-80,
+        street:"bypass"
+    }
+}
+console.log(rajkumar);
+console.log(rajkumar.address)
+console.log(rajkumar.name)
+
+//array of pobjects
+
+const users=[
+{
+    uname:'vamshi',
+    age:22,
+    phine:89898989,
+    email:'vamsi@gmail',
+    usertype:'premier'
+},
+{
+    uname:'parvez',
+    age:22,
+    phine:89898989,
+    email:'parvez@gmail',
+    usertype:'basic'
+},
+{
+    uname:'mahesh',
+    age:22,
+    phine:898989,
+    email:'mahesh@gmail',
+    usertype:'basic'
+},
+]
+
+console.log(users[0])
+
+const arra=['vamsi',22,'parvez','mahesh']
