@@ -5,9 +5,7 @@ let studentName = "Raj";
 console.log(studentName); // Raj
 
 function showStudent() {
-
     console.log(studentName); // Raj
-
 }
 
 showStudent();
@@ -23,7 +21,7 @@ function greet() {
 
 greet();
 
-console.log(message);//refrence error
+// console.log(message);//refrence error
 
 //outer scope can be accessed by inner
 let company = "Adiguru";
@@ -43,22 +41,22 @@ function course() {
 
 }
 
-console.log(trainer);
+// console.log(trainer);
 
 //var ignores block scope
-function demo() {
+// function demo() {  //function scope
 
-    if (true) {
+//     if (true) {  //block scope
+//         var city = "Hyderabad";
 
-        var city = "Hyderabad";
+//     }
+//                 console.log(city);
 
-    }
 
-    console.log(city);
 
-}
-
-demo();
+// }
+//  //global scope
+// demo();
 
 //let and const respects block scope
 function demo() {
@@ -67,7 +65,7 @@ function demo() {
 
         let city = "Hyderabad";
         const state='telanagna'
-
+ 
     }
 
     console.log(city);//reference error
@@ -78,7 +76,7 @@ function demo() {
 demo();
 
 
-//Var vs Let vs Const
+// //Var vs Let vs Const
 function demo() {
 
     if (true) {
@@ -101,19 +99,19 @@ function demo() {
 
 demo();
 
-//let isnide same block
-if (true) {
+// //let isnide same block
+// if (true) {
 
-    let age = 25;
+//     let age = 25;
 
-    console.log(age);
+//     console.log(age);
 
-}
+// }
 
-//const inside same block
-if (true) {
-    const course = "JavaScript";
+// //const inside same block
+// if (true) {
+//     const course = "JavaScript";
 
-    console.log(course);
+//     console.log(course);
 
-}
+// }

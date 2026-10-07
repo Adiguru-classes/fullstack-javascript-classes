@@ -1,5 +1,6 @@
 // Number
 var num = 20;//number
+
 var numTwo = 20.36;//decimal number
 console.log(num, numTwo);
 
@@ -7,22 +8,23 @@ console.log(num, numTwo);
 var name = "str  kumar";
 console.log(name.length);//3
 
-var name = "strkumar";
-console.log(name.toUpperCase());//str
+var name = "strkumar"; 
+console.log(name.toUpperCase());//STRKUMAR
 
-var name = "str";
-console.log(name.toLowerCase());//str
-
+var name = "RAJ";
+console.log(name.toLowerCase());//raj  
 var name = "str";
 
 console.log(name)
 console.log(name.trim());//"str"
+var n= ' raj kumar  '
+console.log(n.trim())
 
-var city = "Delhi";
-console.log(city.charAt(4));
+var city = "Delhisrt";
+console.log(city.charAt(3));
 
 var city = "Hyderabad";
-console.log(city.indexOf("e"));
+console.log(city.indexOf("b"));
 
 var city = "Hyderabad";
 console.log(city.includes("der"));//true
@@ -34,13 +36,13 @@ var city = "Hyderabad";
 console.log(city.replace("Hyder", "parvez"));//ahmadabad
 
 var city = "Hyderabad";
-console.log(city.slice(2, 3));//Hyder
+console.log(city.slice(5,7));//Hyder
 
-var firstName = "str";
+var firstName = "raj";
 var lastName = "Kumar";
-console.log(firstName + lastName);
+console.log("hello,hy i am", firstName +lastName);
 
-var z='hello world'
+var z='hello world' 
 console.log(z)//strkumar(no space between them)
 
 var first = "str";
@@ -102,11 +104,11 @@ console.log(str.indexOf('html'));//to find index value of a word
 console.log(str.indexOf('hello'));//if word is not present, then it return -1
 
 //searching in a string
-console.log(str.indexOf('end',3));//return the index/position value of the first occurence of the specified word
+console.log(str.indexOf('end',4));//return the index/position value of the first occurence of the specified word
 //optional, we can pass second parameter as index/position value(then it will start searching after that position value)
 
 console.log(str.lastIndexOf('end'));//return the index/position value of the last occurence of the specified word
-console.log(str.search('end'));//return the index/position value of the first occurence of the specified word
+console.log(str.search('end'));//return t he index/position value of the first occurence of the specified word
 console.log(str.indexOf('hello'));//if word is not present, then it return -1
 // console.log(str.indexOf("end", "html"));
 

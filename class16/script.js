@@ -2,8 +2,7 @@
 
 // console.log("Before Fetch");
 
-// const promise = fetch("https://jsonplaceholder.typicode.com/users");
-
+// const promise = fetch ("https://jsonplaceholder.typicode.com/users");
 // console.log(promise);//pending
 
 // console.log("After Fetch");
@@ -11,31 +10,26 @@
 //success state
 // const prom = fetch("https://jsonplaceholder.typicode.com/users");
 
-// console.log("Immediately:", prom);
-
-// prom.then(function(r){
+// prom.then(function(data){
 
 //     console.log("Success!");
 
-//     console.log(r);
+//     console.log(data);
 
 // });
 
 
 //rejected state
-fetch("https://invalid-domain-12345.com/users")//invalid url
+// fetch("https://invalid-domain-12345.com/users")//invalid url
+// .then(function(response){
 
-.then(function(response){
+//     console.log(response);
 
-    console.log(response);
+// }).catch(function(error){
 
-})
+//     console.log(error);
 
-.catch(function(error){
-
-    console.log(error);
-
-});
+// });
 
 //promise settimeout
 // const promise = fetch("https://jsonplaceholder.typicode.com/users");
@@ -55,9 +49,9 @@ fetch("https://invalid-domain-12345.com/users")//invalid url
 function loadMessage() {
 
     fetch("message.txt")
-        .then(function (res) {
-            console.log(res);
-            return res.text();//we convert resposne object into text
+        .then(function (r) {
+            console.log(r);
+            return r.text();//we convert resposne object into text
 
         }) .then(function (a) {
 
@@ -78,20 +72,20 @@ function loadStudent() {
 
     fetch("student.json")
 
-        .then(function (response) {
+        .then(function (r) {
 
-            return response.json();//here we convert json object to normal javascript object
+            return r.json();//here we convert json object to normal javascript object
 
         })
 
-        .then(function (student) {
+        .then(function (s) {
 
             console.log(s);
 
-            document.getElementById("output").innerHTML =
+            document.getElementById("output").innerHTML =  //template literals
 
                 `
-                Name : ${s.name}<br>
+                Nameee : ${s.name}<br>
                 Age : ${s.age}<br>
                 City : ${s.city}
                 `;
@@ -100,66 +94,66 @@ function loadStudent() {
 
 }
 
-loadStudent()
+// loadStudent()
 
 //console data frpom public api
-function loadUsers() {
+// function loadUsers() {
 
-    fetch("https://jsonplaceholder.typicode.com/users")
+//     fetch("https://jsonplaceholder.typicode.com/users")
 
-        .then(function (response) {
+//         .then(function (response) {
 
-            return response.json();
+//             return response.json();
 
-        })
+//         })
 
-        .then(function (users) {
+//         .then(function (users) {
 
-            console.log(users);
+//             console.log(users);
 
-        })
+//         })
 
-        .catch(function () {
+//         .catch(function () {
 
-            console.log("Error");
+//             console.log("Error");
 
-        });
+//         });
 
-}
-loadUsers();
+// }
+// loadUsers();
 
 //console only user names
-fetch("https://jsonplaceholder.typicode.com/users")
+// fetch("https://jsonplaceholder.typicode.com/users")
 
-.then(function(response){
+// .then(function(response){
 
-    return response.json();
+//     return response.json();
 
-}).then(function(users){
+// }).then(function(users){
 
-    users.forEach(function(user){
+//     users.forEach(function(user){
 
-        console.log(user.name);
+//         console.log(user.name);
 
-    });
-});
+//     });
+// });
 
-fetch("https://fakestoreapi.com/products")
-    .then(function(response) {
+// fetch("https://fakestoreapi.com/products")
+//     .then(function(response) {
 
-        return response.json();
+//         return response.json();
 
-    })
-    .then(function(products) {
+//     })
+//     .then(function(products) {
 
-        console.log(products);
+//         console.log(products);
 
-    })
-    .catch(function(error) {
+//     })
+//     .catch(function(error) {
 
-        console.log(error);
+//         console.log(error);
 
-    });
+//     });
 
     const productsContainer = document.getElementById("products");
 
@@ -183,9 +177,10 @@ fetch("https://fakestoreapi.com/products")
 
                 <img src="${product.image}" width="150">
 
-                <p>Price: $${product.price}</p>
+                <p>Price: ${product.price}</p>
                 <p>category:"${product.category}</p>
-             <p>description</p>
+                <p>description:"${product.description}</p>
+                <p>rating:"${product.rating.rate}"</p>
 
                 <hr>
 
@@ -210,7 +205,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
     headers: {
 
-        "Content-Type": "application/json" //telling the brwser about data format while sending-it labels teh poarcel with data format ex:html,text,json
+        "Content-Type": "application/json" //telling the brwser about data format while sending-it labels the parcel with data format ex:html,text,json
 
     },
 
@@ -218,7 +213,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
         title: "JavaScript",
 
-        body: "Learning Fetch API",
+    description: "Learning Fetch API",
 
         userId: 1
 
@@ -265,7 +260,7 @@ fetch("https://jsonplaceholder.typicode.com/posts/1", {
 
 .then(function(response){
 
-    return response.json();
+    return response.json(); //it returns resposne objecta nd data is inside thatt object
 
 })
 

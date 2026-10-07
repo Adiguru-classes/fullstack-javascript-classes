@@ -20,7 +20,7 @@
 
 //for loop
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 3; i >= 5; i++) {
 
     console.log(i);
 
@@ -28,21 +28,23 @@ for (let i = 1; i <= 5; i++) {
 
 console.log('i am rajkumar');
 console.log('i am rajkumar');
-console.log('i am rajkumar')
+console.log('i am rajkumar');
 console.log('i am rajkumar')
 console.log('i am rajkumar')
 console.log('i am rajkumar')
 
 
 
-for (let i = 1; i <= 5; i++) { //increment
+for (let i = 5; i >=1; i--) { //increment
     console.log("hy,i am rajkumar");
 }
+
+
 for (var j = 5; j > 0; j--) {
     console.log(j);//
 }
 
-for (var i = 0; i <= 20; i = i + 2) {
+for (var i = 0; i <= 20; i = i + 3) {
     console.log(i);//
 }
 
@@ -56,12 +58,12 @@ for (var x = 0; x <= 0; x++) {
 
 
 //iterate over array
-var arr = [90, 78, 67, 78, 100];//5
+var raj = [90, 78, 67, 78, 100];//5
 
-for (var i =0; i<arr.length; i++) {
-    console.log(arr[i]);//90 78 67 78 100
+for (var i =0; i<raj.length; i++) {
+    console.log(raj[i]);//90 78 67 78 100
 
-    if (arr[i] == 100) {
+    if (raj[i] == 100) {
         console.log('found');
     }else{
         console.log('not found')
@@ -160,13 +162,15 @@ for(const key in student){
 //block of code
 // }
 
-let password = "";
+// let password = "";
 
-while(password !== "admin"){
-    password = prompt("Enter Password");
-}
+// while(password !== "admin"){
+//     password = prompt("Enter Password");
+// }
 
-
+// let aa=prompt('enter name')
+// console.log(aa)
+// alert('welcome')
 var i=0  //initialisation
 while (i < 5) {   //condition
     console.log(i);
@@ -192,13 +196,13 @@ while (i < arr.length) {
     i++
 }
 
-let pin = "";
+// let pin = "";
 
-while (pin !== "1234") {
-    pin = prompt("Enter PIN");
-}
+// while (pin !== "1234") {
+//     pin = prompt("Enter PIN");
+// }
 
- console.log("Login Successful");
+//  console.log("Login Successful");
 // prompt('enter name')
 
 // infinite loop
@@ -209,14 +213,14 @@ while (pin !== "1234") {
 // } while(condition)
 
 //do while lop will execute the code first and checks teh condition next
-let i2 = 1;
+// let i2 = 1;
 
-do {
+// do {
 
-    console.log(i2);
-    i++;
+//     console.log(i2);
+//     i++;
 
-} while (i2 <= 5);1,2,3,4,5
+// } while (i2 <= 5);1,2,3,4,5
 
 // Runs once even if condition is false.
 let number = 10;
@@ -285,7 +289,7 @@ for (var i = 0; i < arr.length; i++) {
 
 for (let i = 1; i <= 10; i++) {
 
-    if (i == 5) {
+    if (i == 3) {
         continue;//
 
     }
@@ -333,11 +337,11 @@ for (var i = 0; i < str.length; i++) {
 
 
 //for loops using array of objects
-et users = [
+let users = [
     { name: "Alice", age: 25 },
     { name: "Bob", age: 30 },
     { name: "Charlie", age: 35 }
-];l
+];
 
 for (let i = 0; i < users.length; i++) {
     console.log(users[i].name, users[i].age);//Alice 25
@@ -348,7 +352,7 @@ for (let i = 0; i < users.length; i++) {
 
 //for loop using break statement
 for (let i = 0; i < 10; i++) {
-    if (i === 5) {
+    if (i === 3) {
         console.log(i)
         break; // Exit the loop when i equals 5
     }
@@ -392,10 +396,10 @@ console.log(greet("Alice")); //give this example withpout using template literal
 
 //finding smallest number from an array
 const a = [12, 8, 130, 5,7,44];
-let smallnum = a[0];  
+let largestnum = a[0];  
 for (let i = 1; i < a.length; i++) {
-    if (a[i] < smallnum) {
-        smallnum = a[i];  
+    if (a[i] > smallnum) {
+        largest = a[i];  
     }
 }
-console.log(smallnum);
+console.log(largestnum);

@@ -1,5 +1,6 @@
 // declaration of function
 // syntax
+
 // function functionname() {
 
 // }
@@ -8,6 +9,17 @@
 // console.log('third');
 
 //basic function
+function rajkumar(a,b){
+    console.log("i am function raj");
+    console.log(a+b)
+
+}
+rajkumar(10,20)
+
+// function preeti(){
+// }
+// preeti()
+
 function k(){ //declaring the function
     console.log("helloo world"); //function block of code
   }
@@ -25,6 +37,7 @@ j()
 //   raj(); // Output: Hello ramesh!
   
 //function assigning to another avriable
+
   let rajj=function(){
             console.log("Hello Rajkumar!");
   }
@@ -33,19 +46,32 @@ j()
   let a=10;
   let b=7;
 
-  function addd(a, b) {
-        console.log(a+b)
-     return a + b;
+  function addd(a,b){
+    console.log(a+b)
+    return a+b
   }
-//   addd(5,7)
-  let resultt = addd(5, 7);
-  console.log(resultt);  // Output: 12
+//   addd(1,5)
+let res=addd(1,5)
+console.log(res)
+let val=res+10
+console.log(val)
 
-  let vall=resultt +10;
-  console.log(vall)
+
+
+//   function addd(a, b) {
+//         console.log(a+b)
+//      return a + b;
+//   }
+// //   addd(5,7)
+//   let resultt = addd(5, 7);
+//   console.log(resultt);  // Output: 12
+
+//   let vall=resultt +10;
+//   console.log(vall)
   
   const multiplyy = function(a, b) {
     return a * b;
+    // console.log(a*b)
   };
   let resulttt=  multiplyy(5, 7);
   console.log(resulttt); // Output: 35
@@ -252,7 +278,7 @@ const books = [
 
 // Using forEach to log the title and author of each book
 books.forEach(function(r) {
-    console.log(`Title: ${r.title}, Author: ${r.author}`);
+    console.log(`Title: ${r.title}, Author: ${r.author}`);//t emplate literals
 });
 
 // const books1 = [
@@ -271,7 +297,7 @@ books.forEach(function(book) {
 
 console.log(emptyarray); 
 
-//2. map():The map method creates a new array with the results of calling a provided function 
+//2. map(): d creates a new array with the results of calling a provided function 
 //on every element in the array. It returns a new array without modifying the original array.
 const numbers1 = [1, 2, 3, 4, 5];
 

@@ -13,17 +13,15 @@
 
 var student="rajkumar";
 
-if(student=="rajkumarr"){
-    console.log("hello raj");
+if(student=="rajkumar"){
+    console.log(student);
 }
 else{
 console.log("wrong input");
 }
 
-let age = 18;  
-
-
-if(age = 18){
+let age = 19;  
+if(age >=18){
    console.log("Eligible to Vote");
 }
 else{
@@ -43,7 +41,7 @@ if (firstName == 'alina') {
 }
 
 // if else
-if (firstName == 'alina') {
+if (firstName == 'alinaa') {
     console.log(firstName);
 }
 else {
@@ -51,7 +49,7 @@ else {
 }
 
 
-let parvezmarks = 1;
+let parvezmarks = 43;
 
 if(parvezmarks >= 90){
    console.log("Grade A");
@@ -63,14 +61,15 @@ else if(parvezmarks >= 50){
    console.log("Grade C");
 }
 else{
-   console.log("pass");
+   console.log("fail");
 
 }
 
 // Ternary operator (shortcut syntax for if & else)
 // (condition) ? (its executed if it is true) : (its executed if it is false)
 var stud='akshay';
-var res=(stud=='akshay') ? ('hello akshay') : ('wrong input');
+
+var res=(stud=='akshaya') ? ('hello akshay') : ('wrong input');
 console.log(res)
 
 var nums="10";
@@ -121,8 +120,10 @@ switch (ag) {// age === case numbers
         break;
 }
 
-let value=11;
-if(value%2==0){
+console.log('hy i am console')
+
+let value=28;
+if(value%3==0){
     console.log('even')
 }else{
     console.log('odd');
@@ -138,6 +139,14 @@ else {
     console.log("Insufficient Balance");
 }
 
+
+let user='admin'
+
+if(user=='admin'){  //"customer"=="admin"
+    console.log('ur logged in as admin')
+}else{
+    console.log('ur logged in as customer')
+}
 //task
 // Check whether a number is positive or negative.
 // Check whether a number is even or odd.

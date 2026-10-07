@@ -1,3 +1,10 @@
+
+var a=document.getElementById('h1').innerHTML
+
+console.log(a)
+var b=document.getElementsByTagName('h1')
+console.log(b)
+
 function getName() {
     //get element by id
     var n = document.getElementById('name').value;
@@ -57,6 +64,8 @@ function getName() {
     // Create a node(html element)
     var element = document.createElement('div');
     console.log(element);
+        // console.log(element);
+
     element.innerHTML = 'DOM';
     document.body.appendChild(element);  // <div>DOM</div>
 
@@ -82,7 +91,7 @@ function getName() {
 
     document.getElementById('display').style.backgroundColor = "pink";
 
-    document.getElementById('disply-block').style.display = "block";
+    document.getElementById('disply-block').style.disp  lay = "block";
 
 }
 
@@ -91,7 +100,7 @@ var r=document.createElement('div')
  console.log(r)
 var s=document.createElement('p')
 console.log(s)
-s.textContent='hi,i am p tag inside div tag'
+s.textContent='hi,i am sai kiran'  
 console.log(s.textContent)
 
 r.appendChild(s)
@@ -102,21 +111,21 @@ console.log(r)
 // </div>
 
 
-// const div = document.createElement('div');   // <div>
-// const p = document.createElement('p');       // <p>
+const div = document.createElement('div');   // <div>
+const p = document.createElement('p');       // <p>
 
-// p.textContent = 'Hello, world!';
+p.textContent = 'Hello, world!';
 
-// div.appendChild(p);
+div.appendChild(p);
 
-// document.body.appendChild(div);
+document.body.appendChild(div);
 
-// const button = document.createElement('button');
-// button.innerHTML = 'Click Me';
-// button.className = 'btn btn-primary';
+const buttonn = document.createElement('button');
+buttonn.innerHTML = 'Click Me';
+buttonn.className = 'btn btn-primary';
 
-// document.body.appendChild(button);
-// console.log(button)
+document.body.appendChild(buttonn);
+console.log(buttonn)
 
 
 
@@ -197,6 +206,8 @@ newDiv.textContent = 'This is a newly created div element!';
 // Step 3: Append the new div to the container element
 var c = document.getElementById('container');
 c.appendChild(newDiv);
+
+
 var d=document.createElement('h1');
 d.textContent='hy i am h1 tag CREATED BY RAJKUMARRRR'
 newDiv.appendChild(d)

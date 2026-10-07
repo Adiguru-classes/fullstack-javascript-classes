@@ -1,5 +1,5 @@
 function showMessage(){
-    alert("hy,i am onclick event");
+    alert("LOgin successful!");
 }
 
 
@@ -24,20 +24,21 @@ document.getElementById("myForm")
 
 });
 
-document.getElementById('click-button').addEventListener('click', function (e) {
-    e.preventDefault();//prevent default behavior of any event
-    console.log('hi click is working');//event object
-});
+// document.getElementById('click-button').addEventListener('click', function (e) {
+//     e.preventDefault();//prevent default behavior of any event
+//     console.log('hi click is working');//event object
+// });
 
 function focusEvent() {
-    document.getElementById("input-one").style.border = "2px solid pink";
+    // document.getElementById("input-one").style.backgroundColor = "2px solid blue";
+    alert('i am focus')
 }
 
 
 function keydownEvent() {
     
-    document.getElementById("input-two").style.border = "2px solid yellow";
-    document.getElementById("input-two").style.backgroundColor = "yellow";
+    // document.getElementById("input-two").style.border = "2px solid yellow";
+    document.getElementById("input-two").style.backgroundColor = "blue";
 }
 
 
@@ -138,13 +139,13 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
 
 document.getElementById('input-one').addEventListener("focus", focusEvent);
 
-document.getElementById('check').addEventListener("click", function (event) {
-    event.preventDefault();
-})
+// document.getElementById('check').addEventListener("click", function (event) {
+//     event.preventDefault();
+// })
 
-document.getElementById('amazon-data').addEventListener("click", function (event) {
-    event.preventDe0911111111fault();
-})
+// document.getElementById('amazon-data').addEventListener("click", function (event) {
+//     event.preventDefault();
+// })
 
 // onload: body, iframe, img
 
@@ -153,4 +154,8 @@ document.getElementById('amazon-data').addEventListener("click", function (event
     
 // });
 
-
+function increment(){
+    let count =0
+count++
+console.log(count)
+}

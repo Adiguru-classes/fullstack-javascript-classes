@@ -3,28 +3,29 @@
 // }, milliseconds);
 
 //example-1
-// setTimeout(function(){console.log('hy,i am settimeout')},5000); //1000ms=1 second
+// setTimeout(function(){ console.log('hy,i am settimeout')},2000); //1000ms=1 second
 
 // example-2
-// console.log("Program Started");
-// setTimeout(function(){
-//     console.log("displaying products");
-// },5000);//3 seconds
-// console.log("Program Ended");
+console.log('program started')
+setTimeout(function(){
+    console.log("displaying products");
+
+},5000);//3 seconds
+console.log("Program Ended");
 
 //example-3 calling function after few seconds
 
-// function greet(){
-//     console.log("Good Morning");
-
-// }
-// setTimeout(greet,3000);
+function greet(){
+    console.log("Good Morning");
+}
+setTimeout(greet,3000);
 
 //clear timer
 const timer = setTimeout(function(){
     console.log("OTP Expired");
 
-},2000);
+
+},3000);
 clearTimeout(timer);
 
 // const timer = setTimeout(function(){
@@ -41,11 +42,9 @@ clearTimeout(timer);
 
 // },5000);
 
-//setInterval-Runs repeatedly after every given interval.
+// setInterval-//Runs repeatedly after every given interval.
 // setInterval(function(){
-
 //     console.log("Hello");
-
 // },2000);
 
 //Every second Current time updates.
@@ -56,81 +55,78 @@ clearTimeout(timer);
 
 // let count = 1;
 // setInterval(function(){
-
-//     console.log(count);
-//     count++;
+ //     count++;
 
 // },2000);
 
 //clear interval
-// let count = 1;
-// const timerr = setInterval(function(){
-//     console.log(count);
+let count = 1;
+const timerr = setInterval(function(){
+    console.log(count);
 
-//     count++;
+    count++;
 
-//     if(count==5){
-//         clearInterval(timerr);
-//     }
+    if(count==5){
+        clearInterval(timerr);
+    }
 
-// },1000);
+},1000);
 
-//mini project example
-// let time = 10;
-// const timerrr = setInterval(function(){
-
-//     console.log(time);
-//     time--;
-//     if(time<0){
-//         clearInterval(timerrr);
-//         console.log("Time Up");
-//     }
-// },1000);
+// mini project example
+let time = 10;
+const timerrr = setInterval(function(){
+    console.log(time);
+    time--;
+    if(time<0){
+        clearInterval(timerrr);
+        console.log("Time Up");
+    }
+},1000);
 
 
 
 //mini task-color changer
 
-// const colors = ["red","blue","green","yellow","pink"];
+const colors = ["red","blue","green","yellow","pink"];
 
-// let index=0;
+let index=0;
 
-// setInterval(function(){
+setInterval(function(){
 
-// document.body.style.backgroundColor=colors[index];
+document.body.style.backgroundColor=colors[index];
 
-// index++;
+index++;
 
-// if(index==colors.length){
+if(index==colors.length){
 
-// index=0;
+index=0;
 
-// }
+}
 
-// },2000);
+},1000);
 
 
 //mini task 
-// const heading =
-// document.getElementById("heading");
+const heading =
+document.getElementById("heading");
 
-// setTimeout(function(){
-// heading.innerText="JavaScript Class";
-// },3000);
+setTimeout(function(){
+heading.innerText="JavaScript Class";
+},3000);
 
 // //mini task 
-// const countt =
-// document.getElementById("count");
+const countt =
+document.getElementById("count");
 
-// let number=0;
+let number=0;
 
-// setInterval(function(){
+setInterval(function(){
 
-// number++;
+number++;
 
-// countt.innerText=number;
+countt.innerText=number;
 
-// },1000);
+},1000);
 
 
 //tasks for studemnts

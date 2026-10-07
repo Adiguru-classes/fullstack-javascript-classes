@@ -6,8 +6,8 @@ const raj= [10,20,30];
 //     console.log(number);
 // });//output:10 20 30
 //  for(var i=1;i<10;i++)
-raj.forEach((a)=>{
-    console.log(a);//10 20 30
+raj.forEach((b)=>{
+    console.log(b);//10 20 30
 });
 //same example with loop
 // const numbers = [10,20,30];

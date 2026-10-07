@@ -1,7 +1,44 @@
+
+console.log('BEFORE FETCH')
+
+// fetch("https://fakestoreapi.com/products")
+
+
+// .then(function(response){
+// console.log(response)
+//     return response.json();
+
+// }).then(function(products){
+
+//     console.log(products);
+
+// }).catch(function(error){
+
+//     console.log(error);
+
+// });
+
+console.log('hy,i am AFTER fetch')
+
+async function getProducts(){
+    const response =await fetch("https://fakestoreapi.com/products");
+    console.log(response)
+    const p =await response.json();
+    console.log(p)
+}
+
+getProducts();
+
+
+const a=fetch("https://fakestoreapi.com/products")  
+console.log(a)
+
+
 async function getUser() {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json(); // Wait for JSON to be ready
+    console.log(data)
     document.getElementById('output').textContent =
       `Name: ${data.name}, Email: ${data.email}`;
   } catch (error) {
@@ -14,8 +51,9 @@ async function getUser() {
 
 async function fetchProducts() {
   try {
-    const response = await fetch('https://fakestoreapi.in/api/products?page=2'); // get 6 products
+    const response = await fetch('https://fakestoreapi.com/products'); // get 6 products
     const products = await response.json();
+    console.log(products)
 
     const productContainer = document.getElementById('productContainer');
 
@@ -25,6 +63,7 @@ async function fetchProducts() {
         <img src="${ramesh.image}" alt="${ramesh.title}">
         <h4>${ramesh.title}</h4>
         <p>$${ramesh.price}</p>
+        <h3>${ramesh.description}</h3>
       </div>
     `).join('');
 

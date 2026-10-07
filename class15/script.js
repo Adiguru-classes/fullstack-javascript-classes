@@ -8,12 +8,12 @@
 //localStorage.setItem(key, value);
 
 localStorage.setItem("name", "rohith");
-// localStorage.setItem("username", "rajkumar");
+ localStorage.setItem("username", "parvez");
 
 
 //getItem-gets data
-// const n = localStorage.getItem("name");
-// console.log(n);
+const n = localStorage.getItem("name");
+console.log(n);
 
 // let user = localStorage.getItem("username");  // "rajkumar"
 // console.log(user);
@@ -23,21 +23,21 @@ localStorage.setItem("name", "rohith");
 // console.log(localStorage.getItem("name")); // null
 
 //clear()
-//  localStorage.clear();
+ localStorage.clear();
 
 //session storage
 // Save data
-// sessionStorage.setItem("theme", "dark");
+sessionStorage.setItem("theme", "dark");
 
 // Get data
-// let theme = sessionStorage.getItem("theme");  // "dark"
-// console.log(theme)
+let theme = sessionStorage.getItem("theme");  // "dark"
+console.log(theme)
 
 // Remove a specific item
-// sessionStorage.removeItem("theme");
+sessionStorage.removeItem("theme");
 
 // Clear all sessionStorage
-// sessionStorage.clear();
+sessionStorage.clear();
 
 //practical example
 // const input = document.getElementById("name");

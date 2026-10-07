@@ -1,5 +1,5 @@
 //increments and decrements
-let count = 7;
+let count = 5;
 count++;
 console.log(count);//6
 
@@ -12,7 +12,7 @@ console.log(likes);//101
 let coun = 1;
 coun++;
 coun++;
-coun++;
+// coun++;
 console.log(coun);
 
 let x=5;
@@ -22,7 +22,7 @@ console.log(x)
 //decrement operateor
 let y = 10;
 y--;
-console.log(count);
+console.log(y);//9
 
 
 // Operators
@@ -118,12 +118,13 @@ console.log(str + ' ' + strVal);//\helloworld or hello world
 
 //implicit coersion: automatic type conversion
 console.log(20 + str);//20hello
+console.log(20 +"26")
 console.log(20 * 20 + strVal);//400world
 console.log(20+20+strVal)//40world
 console.log(str + 20 + 20);//hello2020
 console.log(20 + str + 20);//20hello20
 console.log(strVal + 20);//world20
-console.log("20" / 20);//NaN-not a number
+console.log("40" / 20);//NaN-not a number
 console.log(Number(''));//0
 console.log('20hello' / 20);//NaN
 console.log('20' + 20);//2020

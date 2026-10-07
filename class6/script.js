@@ -5,9 +5,14 @@
 // console.log(z)
 
 
+
+
 var a=[1,3,7,9,67];//array of numbers
+console.log(a)
+console.log(a[2])
 var num = [80,78,56,34,20] //array of numbners data type
 var color = ['pink', 'red', 'blue', 'black'];//array of strings data type
+console.log(color)
 var mix = [null, true, false, 90, 'value'];//array of mixed data type
 
 console.log(num.length);//5  //length = number of elements

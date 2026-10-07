@@ -31,14 +31,20 @@ var firstName = 'alina';
 // key/value
 // property/value pair
 
+// var names=['raj','pranavi','mustafa']
+
+
+
 var person = {
+    
     name: 'alina',
     age: 20,
     designation: 'developer',
     hobbies: 'dancing',
     married: true,
     contact: {
-        mobile: '7878898'
+        mobile: '7878898',
+        hn:2-7-80
     }
 }
 
@@ -50,6 +56,8 @@ console.log(person.name);
 
 console.log(person.contact);
 console.log(person.contact.mobile);
+console.log(person.contact.hn);
+
 
 
 var car = {
@@ -83,14 +91,12 @@ var carVal = {
     }
 }
 
-console.log(carVal)
-
-
-
+// console.log(carVal)
 var obj = Object.create(carVal);
 
 console.log(obj.color);//color is a property of obj now
 console.log(obj.type);
+console.log(obj)
 
 console.log(typeof (carVal));
 console.log(typeof (obj));
@@ -130,7 +136,12 @@ person.age = 30;
 person.designation = 'tester';
 console.log(person);
 
-console.log(`${person}`);
+
+var nam='rajkumar'
+console.log("hy",nam)
+console.log(`hy ${nam}`)
+
+console.log(`hy ${person}`);  ``//template literals
 
 console.log('Hi, my hobby is' + person.hobbies);
 
@@ -145,15 +156,16 @@ console.log(person);
 
 // take input using prompt
 
-var store = prompt('Please enter name');
+// var store = prompt('Please enter name');
 
-console.log(store);
+// console.log(store);
 
+// var names=[{'alina'},{'raj'},'pranavi'}]
 
 //array of objects
 var employee = 
-
-[{
+[
+    {
     name: 'alex',
     age: 20,
     contact: {
